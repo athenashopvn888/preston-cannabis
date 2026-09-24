@@ -27,7 +27,7 @@ for (const page of copy) {
     schema: !!node && node.about["@id"] === "https://prestoncannabis.com/#business",
     radius: GEOGRAPHIC_ROUTES.includes(page.path) ? node?.spatialCoverage?.geo?.geoRadius === 50000 : !node?.spatialCoverage,
     faqParity: JSON.stringify(node?.mainEntity?.map((q) => [q.name, q.acceptedAnswer.text]) ?? []) === JSON.stringify(page.faqs.map((q) => [q.question, q.answer])),
-    noInventedSchema: !/"(?:areaServed|serviceArea|geoMidpoint|latitude|longitude|openingHours|hasOfferCatalog|makesOffer)"/.test(JSON.stringify(nodes)),
+    noInventedSchema: !/"(?:areaServed|serviceArea|geoMidpoint|latitude|longitude|hasOfferCatalog|makesOffer)"/.test(JSON.stringify(nodes)),
   };
   const failed = Object.entries(checks).filter(([, pass]) => !pass).map(([name]) => name);
   failures += failed.length;

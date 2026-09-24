@@ -9,12 +9,19 @@ test("one store and website identity, no invented service or inventory facts", (
   assert.equal(graph["@graph"][0]["@id"], `${site.domain}/#business`);
   assert.equal(graph["@graph"][0].address.streetAddress, site.address);
   assert.equal(graph["@graph"][0].address.postalCode, "K1R 7R5");
-  assert.doesNotMatch(JSON.stringify(graph), /areaServed|serviceArea|geoMidpoint|latitude|longitude|openingHours|Offer|Product/);
+  assert.doesNotMatch(JSON.stringify(graph), /areaServed|serviceArea|geoMidpoint|latitude|longitude|Offer|Product/);
+  const store = graph["@graph"].find((n) => n["@type"] === "Store");
+  assert.ok(Array.isArray(store.openingHoursSpecification));
+  assert.equal(store.openingHoursSpecification.length, 7);
+  assert.equal(store.openingHoursSpecification.find((r) => r.dayOfWeek === "Thursday").closes, "04:00");
+  assert.equal(store.openingHoursSpecification.find((r) => r.dayOfWeek === "Sunday").closes, "02:00");
+  assert.equal(store.openingHoursSpecification.find((r) => r.dayOfWeek === "Monday").closes, "01:00");
+  assert.equal(store.openingHours, undefined);
 });
-test("homepage FAQPage attaches without inventing 24h hours", () => {
-  const graph = businessGraph(site, [{ question: "Hours?", answer: "Call ahead." }]);
+test("homepage FAQPage attaches without inventing 24h openingHours string", () => {
+  const graph = businessGraph(site, [{ question: "Hours?", answer: "See weekly grid." }]);
   assert.ok(graph["@graph"].some((n) => n["@type"] === "FAQPage"));
-  assert.doesNotMatch(JSON.stringify(graph), /openingHours|24/);
+  assert.doesNotMatch(JSON.stringify(graph), /Mo-Su 00:00-23:59|openingHours":"/);
 });
 test("50000 metre address-based coverage appears only on approved geographic pages", () => {
   for (const path of LANDING_ROUTES) {
@@ -27,7 +34,7 @@ test("50000 metre address-based coverage appears only on approved geographic pag
       assert.equal(node.spatialCoverage.geo.address.streetAddress, site.address);
     }
     assert.equal(node.about["@id"], `${site.domain}/#business`);
-    assert.doesNotMatch(JSON.stringify(node), /areaServed|serviceArea|geoMidpoint|latitude|longitude|openingHours|Offer|Product/);
+    assert.doesNotMatch(JSON.stringify(node), /areaServed|serviceArea|geoMidpoint|latitude|longitude|openingHoursSpecification|openingHours|Offer|Product/);
   }
 });
 test("FAQ schema derives exactly from supplied visible copy and JSON-LD escapes markup", () => {

@@ -16,8 +16,22 @@ export default function HoursPage() {
       <span className="eyebrow">HOURS HONESTY</span>
       <h1>{HOURS_COPY.h1}</h1>
       <p>{HOURS_COPY.intro}</p>
-      <p className="quiet-note">{HOURS_STATUS.summary} 24-hour marketing is omitted on purpose.</p>
+      <p className="quiet-note">{HOURS_STATUS.summary}</p>
     </div>
+    
+    <div className="info-card" style={{marginBottom: 28}}>
+      <h2>Weekly hours</h2>
+      <ul style={{listStyle: "none", padding: 0, margin: 0}}>
+        {HOURS_STATUS.weekly.map((row) => (
+          <li key={row.dayOfWeek} style={{display: "flex", justifyContent: "space-between", gap: 16, padding: "8px 0", borderBottom: "1px solid rgba(0,0,0,0.08)"}}>
+            <span>{row.dayOfWeek}</span>
+            <strong>{row.label}</strong>
+          </li>
+        ))}
+      </ul>
+      <p className="quiet-note" style={{marginTop: 12}}>Times are Ottawa local. Closes after midnight stay attached to the day the shift began.</p>
+    </div>
+
     {HOURS_COPY.sections.map((section) => (
       <article key={section.heading} style={{marginBottom: 28}}>
         <h2>{section.heading}</h2>

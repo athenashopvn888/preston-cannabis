@@ -10,6 +10,11 @@ const homeTitle = read("lib/editorial.ts").match(/title:\s*"([^"]+)"/)[1];
 
 test("G3 homepage hubs include visit/cig/vape/geo and omit false 24h", () => {
   assert.equal(HOURS_STATUS.is24h, false);
+  assert.equal(HOURS_STATUS.weekly.length, 7);
+  assert.equal(HOURS_STATUS.weekly.find((r) => r.dayOfWeek === "Thursday").closes, "04:00");
+  assert.equal(HOURS_STATUS.weekly.find((r) => r.dayOfWeek === "Sunday").closes, "02:00");
+  assert.equal(HOURS_STATUS.weekly.find((r) => r.dayOfWeek === "Wednesday").closes, "01:00");
+  assert.match(HOURS_COPY.intro, /12 PM|noon/i);
   const hrefs = HOME_HUB_CARDS.map((c) => c.href);
   for (const required of ["/visit", "/native-cigarettes", "/nicotine-vape", "/weed-dispensary-near-me", "/delivery"]) {
     assert.ok(hrefs.includes(required), required);
