@@ -1,0 +1,10 @@
+node_modules/
+.next/
+.vercel/
+.vercel-auth-preston/
+.env*
+!.env.example
+*.tsbuildinfo
+
+.vercel
+.env*

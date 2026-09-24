@@ -1,0 +1,164 @@
+{
+  "date": "2026-09-06",
+  "variant": "PRESTON_NEAR_ME_50KM_VARIANT_V1",
+  "deploymentId": "dpl_FpPjUEf7ko4wGtqSFbFmaH1BGCLg",
+  "deploymentUrl": "https://preston-cannabis-rn017m08x-athenashopvn888-2439s-projects.vercel.app",
+  "domain": "https://prestoncannabis.com",
+  "target": "production",
+  "state": "READY",
+  "cloudBuildSeconds": 20,
+  "livePageResults": [
+    {
+      "path": "/weed-dispensary-near-me",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "path": "/dispensaire-cannabis-pres-de-moi",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "path": "/info/weed-dispensary-near-me",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "path": "/info/weed-store-near-gatineau",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "path": "/info/dispensary-near-me",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "path": "/contact",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": null
+    },
+    {
+      "path": "/faq",
+      "checks": 12,
+      "failed": [],
+      "faqs": 5,
+      "radius": null
+    },
+    {
+      "path": "/delivery",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": null
+    },
+    {
+      "path": "/resources",
+      "checks": 12,
+      "failed": [],
+      "faqs": 0,
+      "radius": null
+    },
+    {
+      "path": "/resources/first-visit",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "path": "/resources/gatineau-hull-route-guide",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "redirect": 308,
+      "location": "/weed-dispensary-near-me?qa=keep",
+      "redirectPass": true,
+      "emptySitemap": true,
+      "failures": 0
+    }
+  ],
+  "domainResults": [
+    {
+      "page": "/",
+      "status": 200,
+      "nap268": true,
+      "noOldNap": true,
+      "newCoreLink": true,
+      "noOldCoreLink": true,
+      "h1Count": 1,
+      "robots": "noindex, nofollow, noarchive",
+      "canonical": "https://prestoncannabis.com",
+      "businessCount": 1,
+      "homeNoRadius": true
+    },
+    {
+      "host": "www.prestoncannabis.com",
+      "status": 308,
+      "location": "https://prestoncannabis.com/resources/first-visit?qa=domain-check",
+      "normalTLS": true
+    },
+    {
+      "host": "prestoncannabis.ca",
+      "status": 308,
+      "location": "https://prestoncannabis.com/resources/first-visit?qa=domain-check",
+      "normalTLS": true
+    },
+    {
+      "host": "www.prestoncannabis.ca",
+      "status": 308,
+      "location": "https://prestoncannabis.com/resources/first-visit?qa=domain-check",
+      "normalTLS": true
+    }
+  ],
+  "menuSourceParity": {
+    "status": 200,
+    "state": "connected",
+    "source": "CHC01",
+    "sourceIdentity": "response-validated",
+    "products": 138,
+    "flowers": 83,
+    "flowerPriceRows": 175,
+    "stockDate": "2026-09-06T00:53:37.000Z",
+    "renderedFlowerPriceRows": 175,
+    "parity": true
+  },
+  "errorLogs": {
+    "deploymentScoped": true,
+    "window": "30m",
+    "entries": 0
+  },
+  "indexing": "NOINDEX_UNCHANGED",
+  "commits": [],
+  "externalWrites": [
+    "Preston-only Vercel production deployment"
+  ],
+  "protectedSurfacesUnchanged": [
+    "DNS",
+    "GSC",
+    "GBP",
+    "Google Sheets",
+    "Apps Script",
+    "SCC",
+    "FYC",
+    "other stores",
+    "inventory source",
+    "hours"
+  ],
+  "performanceOutcome": "Not measured; no indexing or ranking claim"
+}

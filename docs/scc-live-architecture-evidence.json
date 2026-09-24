@@ -1,0 +1,2469 @@
+{
+  "auditDate": "2026-09-06",
+  "source": "https://spiritcornercannabis.com",
+  "records": [
+    {
+      "kind": "inventory",
+      "sitemapRoutes": [
+        "/",
+        "/weed-dispensary-ottawa",
+        "/24-hour-ottawa-dispensary",
+        "/5-percent-vapes-ottawa",
+        "/cheap-weed-ottawa",
+        "/native-cigarettes-ottawa",
+        "/nicotine-pouches-ottawa",
+        "/dispensaire-cannabis-pres-de-gatineau",
+        "/menu",
+        "/contact",
+        "/careers/budtender",
+        "/faq",
+        "/delivery",
+        "/cannabis-delivery-ottawa",
+        "/games",
+        "/grabba-leaf-shakers",
+        "/exotic",
+        "/premium",
+        "/aaa",
+        "/aa",
+        "/budget",
+        "/items/edibles",
+        "/items/vapes",
+        "/items/vape-disposables",
+        "/items/concentrates",
+        "/items/prerolls",
+        "/items/add-ons",
+        "/items/magic",
+        "/items/cigarettes",
+        "/resources",
+        "/resources/byward-lowertown-visit-guide",
+        "/resources/downtown-ottawa-menu-guide",
+        "/resources/flower-shelf-guide",
+        "/resources/gatineau-hull-route-guide",
+        "/resources/smoke-accessory-guide",
+        "/info/ottawa-weed-dispensary",
+        "/info/cheap-weed-ottawa",
+        "/info/native-cigarettes-ottawa",
+        "/info/weed-store-near-gatineau",
+        "/info/dispensary-near-me-ottawa"
+      ],
+      "flowerDetailCount": 67,
+      "itemDetailCount": 61
+    },
+    {
+      "kind": "page",
+      "route": "/",
+      "status": 200,
+      "redirect": null,
+      "title": "24 Hour Downtown Ottawa Cannabis Store | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com",
+      "headings": [
+        {
+          "level": 1,
+          "text": "24 Hour Downtown Ottawa Cannabis Store"
+        },
+        {
+          "level": 2,
+          "text": "Compare Flower Tiers and Edibles"
+        },
+        {
+          "level": 3,
+          "text": "EXOTIC"
+        },
+        {
+          "level": 3,
+          "text": "PREMIUM"
+        },
+        {
+          "level": 3,
+          "text": "AAA+"
+        },
+        {
+          "level": 3,
+          "text": "AA"
+        },
+        {
+          "level": 3,
+          "text": "BUDGET"
+        },
+        {
+          "level": 3,
+          "text": "EDIBLES"
+        },
+        {
+          "level": 2,
+          "text": "Popular Ottawa smoke product guides"
+        },
+        {
+          "level": 3,
+          "text": "24 Hour Ottawa Dispensary"
+        },
+        {
+          "level": 3,
+          "text": "Cheap Weed Ottawa"
+        },
+        {
+          "level": 3,
+          "text": "Nicotine Pouches Ottawa"
+        },
+        {
+          "level": 3,
+          "text": "Native Smokes Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Featured Flower Listings"
+        },
+        {
+          "level": 3,
+          "text": "OG KUSH (AAA+)"
+        },
+        {
+          "level": 3,
+          "text": "EL CHAPO"
+        },
+        {
+          "level": 3,
+          "text": "MIKE TYSON KO SUPER EXOTICS"
+        },
+        {
+          "level": 3,
+          "text": "PINK BELLAGIO"
+        },
+        {
+          "level": 3,
+          "text": "PINK LIZARD"
+        },
+        {
+          "level": 3,
+          "text": "DEATH STAR BUBBA"
+        },
+        {
+          "level": 3,
+          "text": "CHOCOLATE CHIP COOKIES (S)"
+        },
+        {
+          "level": 3,
+          "text": "O PINK"
+        },
+        {
+          "level": 2,
+          "text": "Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "24 Hour Downtown Ottawa Cannabis Store Near ByWard Market"
+        },
+        {
+          "level": 3,
+          "text": "Open 24 Hours in Downtown Ottawa"
+        },
+        {
+          "level": 3,
+          "text": "Five Flower Tiers"
+        },
+        {
+          "level": 3,
+          "text": "Affordable Cannabis &amp; Popular Products"
+        },
+        {
+          "level": 3,
+          "text": "Late-Night Cannabis Convenience"
+        },
+        {
+          "level": 3,
+          "text": "Smoking Accessories, Nicotine Pouches &amp; Vape Products"
+        },
+        {
+          "level": 3,
+          "text": "Ottawa Delivery Information"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "level": 2,
+          "text": "Visit Spirit Corner"
+        },
+        {
+          "level": 3,
+          "text": "Location"
+        },
+        {
+          "level": 3,
+          "text": "Hours"
+        },
+        {
+          "level": 3,
+          "text": "Walk In"
+        }
+      ],
+      "faqs": [
+        "Where is Spirit Corner Cannabis located?",
+        "When is Spirit Corner Cannabis open?",
+        "Which flower tiers are listed?",
+        "What other product categories are listed?",
+        "Can I call before visiting?"
+      ],
+      "approxBodyWords": 713,
+      "links": [
+        "/menu",
+        "/exotic",
+        "/premium",
+        "/aaa",
+        "/aa",
+        "/budget",
+        "/items/edibles",
+        "/24-hour-ottawa-dispensary",
+        "/cheap-weed-ottawa",
+        "/nicotine-pouches-ottawa",
+        "/native-cigarettes-ottawa",
+        "/dispensaire-cannabis-pres-de-gatineau",
+        "/5-percent-vapes-ottawa",
+        "/cannabis-delivery-ottawa"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/weed-dispensary-ottawa",
+      "status": 200,
+      "redirect": null,
+      "title": "24 Hour Ottawa Dispensary Near ByWard Market | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/weed-dispensary-ottawa",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Spirit Corner Cannabis — 24 Hour Ottawa Dispensary Near ByWard Market"
+        },
+        {
+          "level": 2,
+          "text": "Downtown Ottawa Store Information"
+        },
+        {
+          "level": 2,
+          "text": "Compare Listed Product Categories"
+        },
+        {
+          "level": 2,
+          "text": "Helpful Ottawa Store Information"
+        },
+        {
+          "level": 2,
+          "text": "Visit Spirit Corner Cannabis"
+        },
+        {
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "level": 3,
+          "text": "Where is Spirit Corner Cannabis?"
+        },
+        {
+          "level": 3,
+          "text": "When is the store open?"
+        },
+        {
+          "level": 3,
+          "text": "Can product listings change?"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 270,
+      "links": [
+        "/menu",
+        "/items/prerolls",
+        "/items/edibles",
+        "/items/vape-disposables",
+        "/items/concentrates",
+        "/items/add-ons",
+        "/24-hour-ottawa-dispensary",
+        "/info/weed-store-near-gatineau",
+        "/cheap-weed-ottawa",
+        "/native-cigarettes-ottawa",
+        "/grabba-leaf-shakers",
+        "/cannabis-delivery-ottawa"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/5-percent-vapes-ottawa",
+      "status": 200,
+      "redirect": null,
+      "title": "5% Disposable Vapes in Downtown Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/5-percent-vapes-ottawa",
+      "headings": [
+        {
+          "level": 1,
+          "text": "5% Disposable Vapes in Downtown Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Listed 5% Vape Options"
+        },
+        {
+          "level": 2,
+          "text": "Visit Spirit Corner Cannabis"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 107,
+      "links": [
+        "/nicotine-pouches-ottawa",
+        "/native-cigarettes-ottawa"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/24-hour-ottawa-dispensary",
+      "status": 200,
+      "redirect": null,
+      "title": "24 Hour Ottawa Dispensary | Late Night Cannabis Store Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/24-hour-ottawa-dispensary",
+      "headings": [
+        {
+          "level": 1,
+          "text": "24 Hour Ottawa Dispensary"
+        },
+        {
+          "level": 2,
+          "text": "Open 24 Hours Near ByWard Market"
+        },
+        {
+          "level": 3,
+          "text": "Compare Listings Before a Late-Night Visit"
+        },
+        {
+          "level": 3,
+          "text": "Downtown Ottawa Store Information"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "faqs": [
+        "Is Spirit Corner Cannabis open 24 hours?",
+        "Where is the store?",
+        "Can I call before visiting?"
+      ],
+      "approxBodyWords": 188,
+      "links": [
+        "/items/prerolls",
+        "/items/edibles",
+        "/items/vapes",
+        "/items/concentrates",
+        "/info/weed-store-near-gatineau"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/dispensaire-cannabis-pres-de-gatineau",
+      "status": 200,
+      "redirect": null,
+      "title": "Dispensaire Cannabis Près de Gatineau | Spirit Corner Cannabis Ottawa",
+      "canonical": "https://spiritcornercannabis.com/dispensaire-cannabis-pres-de-gatineau",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Dispensaire Cannabis Près de Gatineau"
+        },
+        {
+          "level": 2,
+          "text": "Boutique à Ottawa près du marché By, ouverte 24 heures"
+        },
+        {
+          "level": 3,
+          "text": "Comparer les catégories avant la visite"
+        },
+        {
+          "level": 3,
+          "text": "Vérifier l’itinéraire et appeler avant de partir"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 193,
+      "links": [
+        "/budget",
+        "/premium",
+        "/items/edibles",
+        "/items/vape-disposables"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/cheap-weed-ottawa",
+      "status": 200,
+      "redirect": null,
+      "title": "Budget Flower and Value Ounces in Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/cheap-weed-ottawa",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Budget Flower and Value Ounces in Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Open 24 Hours at 251 Dalhousie St"
+        },
+        {
+          "level": 2,
+          "text": "Compare Five Flower Tiers"
+        },
+        {
+          "level": 2,
+          "text": "More Listed Product Categories"
+        },
+        {
+          "level": 2,
+          "text": "Call Ahead for a Particular Listing"
+        },
+        {
+          "level": 3,
+          "text": "Cheap Weed Ottawa FAQ"
+        }
+      ],
+      "faqs": [
+        "What Budget flower details can I compare?",
+        "Can listed flower prices change?",
+        "Where is Spirit Corner Cannabis?"
+      ],
+      "approxBodyWords": 181,
+      "links": [
+        "/budget",
+        "/aa",
+        "/aaa",
+        "/premium",
+        "/exotic",
+        "/items/edibles",
+        "/items/vape-disposables",
+        "/items/prerolls",
+        "/items/concentrates"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/native-cigarettes-ottawa",
+      "status": 200,
+      "redirect": null,
+      "title": "Native Cigarettes &amp; Native Smokes Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/native-cigarettes-ottawa",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Native Cigarettes and Native Smokes in Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Adult Smoke Product Listings Near ByWard Market"
+        },
+        {
+          "level": 3,
+          "text": "Cigarette and Smoke Product Listings"
+        },
+        {
+          "level": 3,
+          "text": "Grabba Leaf and Shakers"
+        },
+        {
+          "level": 3,
+          "text": "Plan Your Downtown Ottawa Visit"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "faqs": [
+        "What cigarette details can I compare?",
+        "Can cigarette listings change?",
+        "Where is Spirit Corner Cannabis?"
+      ],
+      "approxBodyWords": 266,
+      "links": [
+        "/grabba-leaf-shakers"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/nicotine-pouches-ottawa",
+      "status": 200,
+      "redirect": null,
+      "title": "Nicotine Pouches Ottawa | $10 Sale Tins | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/nicotine-pouches-ottawa",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Nicotine Pouches in Ottawa — $10 Sale Tins"
+        },
+        {
+          "level": 2,
+          "text": "$10 Nicotine Pouch Sale Tins"
+        },
+        {
+          "level": 2,
+          "text": "Compare Other Adult Smoke Products"
+        },
+        {
+          "level": 2,
+          "text": "Open 24 Hours in Downtown Ottawa"
+        },
+        {
+          "level": 3,
+          "text": "Nicotine Pouches FAQ"
+        }
+      ],
+      "faqs": [
+        "How much are nicotine pouch tins?",
+        "Can pouch listings change?",
+        "Where is the store?"
+      ],
+      "approxBodyWords": 208,
+      "links": [
+        "/items/cigarettes",
+        "/5-percent-vapes-ottawa",
+        "/native-cigarettes-ottawa",
+        "/grabba-leaf-shakers",
+        "/items/add-ons"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/careers/budtender",
+      "status": 200,
+      "redirect": null,
+      "title": "Budtender Or Manager Application | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/careers/budtender",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Budtenders / Managers Wanted"
+        },
+        {
+          "level": 2,
+          "text": "Applicant Q&amp;A"
+        },
+        {
+          "level": 2,
+          "text": "Tell Us About You"
+        },
+        {
+          "level": 3,
+          "text": "Contact"
+        },
+        {
+          "level": 3,
+          "text": "Availability"
+        },
+        {
+          "level": 3,
+          "text": "Experience"
+        },
+        {
+          "level": 3,
+          "text": "Motivation And Fit"
+        },
+        {
+          "level": 3,
+          "text": "Links And Consent"
+        }
+      ],
+      "faqs": [
+        "What kind of person are you looking for?",
+        "Do I need cannabis retail experience?",
+        "What should I include in the application?",
+        "Can I call the store about my application?"
+      ],
+      "approxBodyWords": 458,
+      "links": [
+        "/"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/menu",
+      "status": 200,
+      "redirect": null,
+      "title": "Ottawa Flower &amp; Accessories Menu | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/menu",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Compare flower and accessories in Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Compare Listed Product Details"
+        },
+        {
+          "level": 3,
+          "text": "LAVENDER KUSH"
+        },
+        {
+          "level": 3,
+          "text": "PINK STICKY ALIEN"
+        },
+        {
+          "level": 3,
+          "text": "GAS MONKEY"
+        },
+        {
+          "level": 3,
+          "text": "PURPLE DRAGON (S)"
+        },
+        {
+          "level": 3,
+          "text": "DAYDREAM DIESEL"
+        },
+        {
+          "level": 3,
+          "text": "DANTE INFERNO"
+        },
+        {
+          "level": 3,
+          "text": "SUGAR COOKIES"
+        },
+        {
+          "level": 3,
+          "text": "SLURRICANE"
+        },
+        {
+          "level": 3,
+          "text": "FROSTED COOKIES"
+        },
+        {
+          "level": 3,
+          "text": "SWEET KUSH"
+        },
+        {
+          "level": 3,
+          "text": "DIAMOND OG"
+        },
+        {
+          "level": 3,
+          "text": "QUANTUM KUSH"
+        },
+        {
+          "level": 3,
+          "text": "MKU"
+        },
+        {
+          "level": 3,
+          "text": "DEATH BUBBA"
+        },
+        {
+          "level": 3,
+          "text": "MASTER KUSH (AAA+)"
+        },
+        {
+          "level": 3,
+          "text": "ALIEN WALKER"
+        },
+        {
+          "level": 3,
+          "text": "GREASE MONKEY"
+        },
+        {
+          "level": 3,
+          "text": "PINK ROZAY"
+        }
+      ],
+      "faqs": [
+        "Refine listings by price, weight, THC, product type, and sort"
+      ],
+      "approxBodyWords": 380,
+      "links": [
+        "/cannabis-delivery-ottawa"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/faq",
+      "status": 200,
+      "redirect": null,
+      "title": "Frequently Asked Questions | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/faq",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "level": 2,
+          "text": "Location &amp; Hours"
+        },
+        {
+          "level": 2,
+          "text": "Products &amp; Shopping"
+        },
+        {
+          "level": 2,
+          "text": "Delivery"
+        },
+        {
+          "level": 2,
+          "text": "Still have questions?"
+        }
+      ],
+      "faqs": [
+        "Where is Spirit Corner Cannabis located?",
+        "What are the store hours?",
+        "Do I need an appointment?",
+        "What product categories are listed?",
+        "Can I shop online?",
+        "Can I call before visiting?",
+        "Where can I check delivery information?",
+        "Does the website guarantee delivery service?"
+      ],
+      "approxBodyWords": 193,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/contact",
+      "status": 200,
+      "redirect": null,
+      "title": "Contact and Store Hours | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/contact",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Visit Spirit Corner"
+        },
+        {
+          "level": 2,
+          "text": "Location"
+        },
+        {
+          "level": 2,
+          "text": "Hours"
+        },
+        {
+          "level": 2,
+          "text": "Walk In"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 90,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/cannabis-delivery-ottawa",
+      "status": 200,
+      "redirect": null,
+      "title": "Ottawa Cannabis Delivery Coming Soon | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/cannabis-delivery-ottawa",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Ottawa Delivery Coming Soon"
+        },
+        {
+          "level": 2,
+          "text": "Get a Delivery Launch Update"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 52,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/delivery",
+      "status": 200,
+      "redirect": null,
+      "title": "Cannabis Delivery Coming Soon in Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/delivery",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Delivery Coming Soon"
+        },
+        {
+          "level": 2,
+          "text": "Get Notified When We Launch"
+        },
+        {
+          "level": 3,
+          "text": "Coming Soon"
+        },
+        {
+          "level": 3,
+          "text": "Visit the Store"
+        },
+        {
+          "level": 3,
+          "text": "Open 24 Hours"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 96,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/games",
+      "status": 200,
+      "redirect": null,
+      "title": "Cannabis Arcade Games Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/games",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Spirit Corner Cannabis Arcade"
+        },
+        {
+          "level": 2,
+          "text": "Flappy Bud"
+        },
+        {
+          "level": 2,
+          "text": "Snake Munchies"
+        },
+        {
+          "level": 2,
+          "text": "Brick Breaker 420"
+        },
+        {
+          "level": 2,
+          "text": "Memory Match"
+        },
+        {
+          "level": 2,
+          "text": "2048 Strains"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 90,
+      "links": [
+        "/games/flappy-bud",
+        "/games/snake-munchies",
+        "/games/brick-breaker",
+        "/games/memory-match",
+        "/games/2048-strains"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/grabba-leaf-shakers",
+      "status": 200,
+      "redirect": null,
+      "title": "Grabba Leaf &amp; Grabba Shakers Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/grabba-leaf-shakers",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Grabba Leaf &amp; Grabba Shakers in Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Grabba Leaf and Grabba Shaker Choices"
+        },
+        {
+          "level": 3,
+          "text": "GRABBA"
+        },
+        {
+          "level": 3,
+          "text": "GRABBA SHAKER RedRose / Red Herring"
+        },
+        {
+          "level": 2,
+          "text": "Open 24 Hours Near ByWard Market"
+        },
+        {
+          "level": 2,
+          "text": "Smoke Essentials and Flower at Spirit Corner"
+        },
+        {
+          "level": 2,
+          "text": "Grabba FAQ"
+        }
+      ],
+      "faqs": [
+        "Which Grabba products are listed?",
+        "Where is Spirit Corner Cannabis?"
+      ],
+      "approxBodyWords": 242,
+      "links": [
+        "/items/cigarettes",
+        "/menu",
+        "/info/weed-store-near-gatineau"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/aa",
+      "status": 200,
+      "redirect": null,
+      "title": "AA Weed &amp; Cannabis Flower in Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/aa",
+      "headings": [
+        {
+          "level": 1,
+          "text": "AA Weed &amp; Cannabis Flower in Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Browse the AA Flower Tier"
+        },
+        {
+          "level": 3,
+          "text": "PINK STICKY ALIEN"
+        },
+        {
+          "level": 3,
+          "text": "GAS MONKEY"
+        },
+        {
+          "level": 3,
+          "text": "PURPLE DRAGON (S)"
+        },
+        {
+          "level": 3,
+          "text": "DAYDREAM DIESEL"
+        },
+        {
+          "level": 3,
+          "text": "DANTE INFERNO"
+        },
+        {
+          "level": 3,
+          "text": "SUGAR COOKIES"
+        },
+        {
+          "level": 3,
+          "text": "SLURRICANE"
+        },
+        {
+          "level": 3,
+          "text": "FROSTED COOKIES"
+        },
+        {
+          "level": 3,
+          "text": "SWEET KUSH"
+        },
+        {
+          "level": 3,
+          "text": "DIAMOND OG"
+        },
+        {
+          "level": 3,
+          "text": "QUANTUM KUSH"
+        },
+        {
+          "level": 3,
+          "text": "OG KUSH (AA)"
+        },
+        {
+          "level": 3,
+          "text": "GORILLA GLUE 4"
+        },
+        {
+          "level": 2,
+          "text": "AA Weed &amp; Cannabis Flower in Ottawa | Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "AA as a Focused Spirit Corner Category"
+        },
+        {
+          "level": 3,
+          "text": "Where AA Fits in the Tier Structure"
+        },
+        {
+          "level": 3,
+          "text": "Explore Spirit Corner&#x27;s Five Flower Tiers"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "faqs": [
+        "What is the AA tier at Spirit Corner Cannabis?",
+        "Is the AA page the main Spirit Corner Weed page?",
+        "What other Spirit Corner flower tiers have separate pages?"
+      ],
+      "approxBodyWords": 489,
+      "links": [
+        "/exotic",
+        "/premium",
+        "/aaa",
+        "/aa",
+        "/budget",
+        "/weed-dispensary-ottawa"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/exotic",
+      "status": 200,
+      "redirect": null,
+      "title": "Exotic Weed &amp; Cannabis Flower in Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/exotic",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Exotic Weed &amp; Cannabis Flower in Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Explore the Exotic Flower Tier"
+        },
+        {
+          "level": 3,
+          "text": "PINK BELLAGIO"
+        },
+        {
+          "level": 3,
+          "text": "PINK LIZARD"
+        },
+        {
+          "level": 3,
+          "text": "PINK DEATHSTAR"
+        },
+        {
+          "level": 3,
+          "text": "PINK PERMANENT MARKER"
+        },
+        {
+          "level": 3,
+          "text": "BUBBA STAR"
+        },
+        {
+          "level": 3,
+          "text": "TEQUILA SUNRISE (S)"
+        },
+        {
+          "level": 3,
+          "text": "MIKE TYSON KO SUPER EXOTICS"
+        },
+        {
+          "level": 3,
+          "text": "ALIEN SMACK PINK"
+        },
+        {
+          "level": 3,
+          "text": "STRIPPERS SPIT"
+        },
+        {
+          "level": 3,
+          "text": "PINK STAR"
+        },
+        {
+          "level": 3,
+          "text": "JEDI PINK"
+        },
+        {
+          "level": 3,
+          "text": "DEVIL DRIVER"
+        },
+        {
+          "level": 2,
+          "text": "Exotic Weed &amp; Cannabis Flower in Ottawa | Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "Exotic as a Separate Spirit Corner Tier"
+        },
+        {
+          "level": 3,
+          "text": "Browse Exotic Within the Five-Tier Structure"
+        },
+        {
+          "level": 3,
+          "text": "Explore Spirit Corner&#x27;s Five Flower Tiers"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "faqs": [
+        "What is the Exotic tier at Spirit Corner Cannabis?",
+        "Is the Exotic page Spirit Corner&#x27;s main Weed page?",
+        "What other flower tiers have dedicated pages?"
+      ],
+      "approxBodyWords": 558,
+      "links": [
+        "/exotic",
+        "/premium",
+        "/aaa",
+        "/aa",
+        "/budget",
+        "/weed-dispensary-ottawa"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/premium",
+      "status": 200,
+      "redirect": null,
+      "title": "Premium Weed &amp; Cannabis Flower in Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/premium",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Premium Weed &amp; Cannabis Flower in Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Browse the Premium Flower Tier"
+        },
+        {
+          "level": 3,
+          "text": "ESCOBAR PINK GAS"
+        },
+        {
+          "level": 3,
+          "text": "PINK ROYAL"
+        },
+        {
+          "level": 3,
+          "text": "PINEAPPLE HAZE"
+        },
+        {
+          "level": 3,
+          "text": "DEATH VALLEY"
+        },
+        {
+          "level": 3,
+          "text": "PINK DEATH"
+        },
+        {
+          "level": 3,
+          "text": "DEATH STAR BUBBA"
+        },
+        {
+          "level": 3,
+          "text": "CHOCOLATE CHIP COOKIES (S)"
+        },
+        {
+          "level": 3,
+          "text": "PINK GUCCI DEATH"
+        },
+        {
+          "level": 3,
+          "text": "SUPER MARIO KUSH"
+        },
+        {
+          "level": 3,
+          "text": "SUPER DRIP"
+        },
+        {
+          "level": 3,
+          "text": "PLATINUM TUNA"
+        },
+        {
+          "level": 3,
+          "text": "O PINK"
+        },
+        {
+          "level": 3,
+          "text": "PINK ATOMIC BOMB"
+        },
+        {
+          "level": 3,
+          "text": "KING LOUIS XIII"
+        },
+        {
+          "level": 3,
+          "text": "RED CONGOLESE"
+        },
+        {
+          "level": 3,
+          "text": "ISLAND PINK"
+        },
+        {
+          "level": 2,
+          "text": "Premium Weed &amp; Cannabis Flower in Ottawa | Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "Premium Has Its Own Category Role"
+        },
+        {
+          "level": 3,
+          "text": "Premium Within Spirit Corner&#x27;s Flower Structure"
+        },
+        {
+          "level": 3,
+          "text": "Explore Spirit Corner&#x27;s Five Flower Tiers"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "faqs": [
+        "What is the Premium tier at Spirit Corner Cannabis?",
+        "Does the Premium page replace the broad Weed page?",
+        "Which other Spirit Corner tiers have their own pages?"
+      ],
+      "approxBodyWords": 584,
+      "links": [
+        "/exotic",
+        "/premium",
+        "/aaa",
+        "/aa",
+        "/budget",
+        "/weed-dispensary-ottawa"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/aaa",
+      "status": 200,
+      "redirect": null,
+      "title": "AAA+ Weed &amp; Cannabis Flower in Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/aaa",
+      "headings": [
+        {
+          "level": 1,
+          "text": "AAA+ Weed &amp; Cannabis Flower in Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "🔥 On Sale"
+        },
+        {
+          "level": 3,
+          "text": "OG KUSH (AAA+)"
+        },
+        {
+          "level": 3,
+          "text": "EL CHAPO"
+        },
+        {
+          "level": 2,
+          "text": "Explore the AAA+ Flower Category"
+        },
+        {
+          "level": 3,
+          "text": "MKU"
+        },
+        {
+          "level": 3,
+          "text": "DEATH BUBBA"
+        },
+        {
+          "level": 3,
+          "text": "MASTER KUSH (AAA+)"
+        },
+        {
+          "level": 3,
+          "text": "ALIEN WALKER"
+        },
+        {
+          "level": 3,
+          "text": "GREASE MONKEY"
+        },
+        {
+          "level": 3,
+          "text": "PINK ROZAY"
+        },
+        {
+          "level": 3,
+          "text": "PINK VIOLATOR"
+        },
+        {
+          "level": 3,
+          "text": "MUELLER FUEL"
+        },
+        {
+          "level": 3,
+          "text": "PINK GOO"
+        },
+        {
+          "level": 3,
+          "text": "PURPLE PUNCH"
+        },
+        {
+          "level": 3,
+          "text": "WHITE TRUFFLE"
+        },
+        {
+          "level": 3,
+          "text": "PINK SKYWALKER"
+        },
+        {
+          "level": 3,
+          "text": "PINK GUCCI"
+        },
+        {
+          "level": 3,
+          "text": "BLUEBERRY JUNKY"
+        },
+        {
+          "level": 3,
+          "text": "PINK PREDATOR"
+        },
+        {
+          "level": 3,
+          "text": "PINK FIRE OG"
+        },
+        {
+          "level": 3,
+          "text": "SUPER PINK KUSH"
+        },
+        {
+          "level": 3,
+          "text": "TENTH PLANET"
+        },
+        {
+          "level": 3,
+          "text": "PINK SPACE COOKIES"
+        },
+        {
+          "level": 3,
+          "text": "PINK PANTHER"
+        },
+        {
+          "level": 3,
+          "text": "SPICY PINK"
+        },
+        {
+          "level": 3,
+          "text": "GREY GOOSE"
+        },
+        {
+          "level": 3,
+          "text": "PINK MANGOO"
+        },
+        {
+          "level": 2,
+          "text": "AAA+ Weed &amp; Cannabis Flower in Ottawa | Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "AAA+ as Its Own Flower Category"
+        },
+        {
+          "level": 3,
+          "text": "AAA+ in the Spirit Corner Tier System"
+        },
+        {
+          "level": 3,
+          "text": "Explore Spirit Corner&#x27;s Five Flower Tiers"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "faqs": [
+        "What is AAA+ at Spirit Corner Cannabis?",
+        "Why does AAA+ have a separate page?",
+        "What other flower tiers can be explored separately?"
+      ],
+      "approxBodyWords": 758,
+      "links": [
+        "/exotic",
+        "/premium",
+        "/aaa",
+        "/aa",
+        "/budget",
+        "/weed-dispensary-ottawa"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/items/vapes",
+      "status": 200,
+      "redirect": null,
+      "title": "Vape Pens Ottawa — THC &amp; Nicotine Cartridges | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/items/vapes",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Vape Pens"
+        },
+        {
+          "level": 3,
+          "text": "GEEK PROMAX – 5% | 30K PUFFS"
+        },
+        {
+          "level": 3,
+          "text": "GEEK UNIVERSE 25k PUFFS"
+        },
+        {
+          "level": 3,
+          "text": "Level X G2 pod"
+        },
+        {
+          "level": 3,
+          "text": "NEXA PIX | 30K PUFFS | MANY FLAVORS"
+        },
+        {
+          "level": 3,
+          "text": "OVNS 10000 – 5% | 10K PUFFS"
+        },
+        {
+          "level": 3,
+          "text": "OVNS 2500 – 5% | 2.5K PUFFS"
+        },
+        {
+          "level": 3,
+          "text": "OVNS PIONEER – 5% | 22K PUFFS"
+        },
+        {
+          "level": 2,
+          "text": "Vape Pens Ottawa — THC &amp; Nicotine Cartridges | Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "level": 3,
+          "text": "Visit Spirit Corner Cannabis"
+        }
+      ],
+      "faqs": [
+        "What details can I compare for vape pens?",
+        "Can I ask about a particular vape product?"
+      ],
+      "approxBodyWords": 197,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/items/edibles",
+      "status": 200,
+      "redirect": null,
+      "title": "Cannabis Edibles Ottawa — Gummies, Chocolates &amp; Drinks | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/items/edibles",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Edibles"
+        },
+        {
+          "level": 3,
+          "text": "DUMMY BEARS 200MG - 2000MG - 5000MG"
+        },
+        {
+          "level": 3,
+          "text": "GALAXY GUMMIES 6000MG"
+        },
+        {
+          "level": 3,
+          "text": "GOOBER THC CHOCOLATE 1000MG"
+        },
+        {
+          "level": 3,
+          "text": "GOOBER THC GUMMIES 1000MG"
+        },
+        {
+          "level": 3,
+          "text": "KNOCK OUT GUMMIES"
+        },
+        {
+          "level": 3,
+          "text": "LIVE RESIN GUMMIES SOUR IND / SAT in ASSORTED FLAVORS"
+        },
+        {
+          "level": 3,
+          "text": "NRTHRN EXTRACTS GUMMIES"
+        },
+        {
+          "level": 3,
+          "text": "SHATTER BAR 500mg Indica / Sativa"
+        },
+        {
+          "level": 3,
+          "text": "SHATTER CHEWS 150 MG"
+        },
+        {
+          "level": 3,
+          "text": "SHATTER CHEWS 600 MG"
+        },
+        {
+          "level": 3,
+          "text": "STELLAR GUMMIES 1000MG / 2000MG"
+        },
+        {
+          "level": 3,
+          "text": "STELLAR GUMMIES 500MG"
+        },
+        {
+          "level": 3,
+          "text": "Stoner PATCH"
+        },
+        {
+          "level": 3,
+          "text": "WESLEY HOT CHOCOLATE 40mg THC / 40mg CBD / 20mg CBD + 20mg THC"
+        },
+        {
+          "level": 3,
+          "text": "WESLEY TEA"
+        },
+        {
+          "level": 2,
+          "text": "Cannabis Edibles Ottawa — Gummies, Chocolates &amp; Drinks | Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "level": 3,
+          "text": "Visit Spirit Corner Cannabis"
+        }
+      ],
+      "faqs": [
+        "What details can I compare for edibles?",
+        "Can edible listings change?"
+      ],
+      "approxBodyWords": 317,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/budget",
+      "status": 200,
+      "redirect": null,
+      "title": "Budget Weed &amp; Cannabis Flower in Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/budget",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Budget Weed &amp; Cannabis Flower in Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Explore the Budget Flower Tier"
+        },
+        {
+          "level": 3,
+          "text": "LAVENDER KUSH"
+        },
+        {
+          "level": 2,
+          "text": "Budget Weed &amp; Cannabis Flower in Ottawa | Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "Budget as a Defined Flower Category"
+        },
+        {
+          "level": 3,
+          "text": "Budget Within Spirit Corner&#x27;s Five Tiers"
+        },
+        {
+          "level": 3,
+          "text": "Explore Spirit Corner&#x27;s Five Flower Tiers"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "faqs": [
+        "What is the Budget tier at Spirit Corner Cannabis?",
+        "Does the Budget label confirm a current deal or price?",
+        "Which other Spirit Corner flower tiers have separate pages?"
+      ],
+      "approxBodyWords": 306,
+      "links": [
+        "/exotic",
+        "/premium",
+        "/aaa",
+        "/aa",
+        "/budget",
+        "/weed-dispensary-ottawa"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/items/vape-disposables",
+      "status": 200,
+      "redirect": null,
+      "title": "Disposable Vapes Ottawa — THC Disposable Pens | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/items/vape-disposables",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Vape Disposables"
+        },
+        {
+          "level": 3,
+          "text": "2g GAS GANG Vol.3 HYBRID"
+        },
+        {
+          "level": 3,
+          "text": "DRIZZLE SWITCH 3in1 / 2G"
+        },
+        {
+          "level": 3,
+          "text": "GAS GANG DISPO VAPE 1G"
+        },
+        {
+          "level": 2,
+          "text": "Disposable Vapes Ottawa — THC Disposable Pens | Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "level": 3,
+          "text": "Visit Spirit Corner Cannabis"
+        }
+      ],
+      "faqs": [
+        "What disposable vape details are shown?",
+        "Can disposable vape listings change?"
+      ],
+      "approxBodyWords": 142,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/items/concentrates",
+      "status": 200,
+      "redirect": null,
+      "title": "Cannabis Concentrates Ottawa — Shatter, Wax, Hash &amp; Live Resin | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/items/concentrates",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Concentrates"
+        },
+        {
+          "level": 3,
+          "text": "NEW AFGHAN HASH"
+        },
+        {
+          "level": 3,
+          "text": "DANK CHOCO BAR 1500MG"
+        },
+        {
+          "level": 3,
+          "text": "GRAND CANNABIS- STAR HASH , AFGHAN, DARK VADER"
+        },
+        {
+          "level": 2,
+          "text": "Cannabis Concentrates Ottawa — Shatter, Wax, Hash &amp; Live Resin | Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "level": 3,
+          "text": "Visit Spirit Corner Cannabis"
+        }
+      ],
+      "faqs": [
+        "What concentrate details can I compare?",
+        "Can concentrate listings change?"
+      ],
+      "approxBodyWords": 140,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/items/add-ons",
+      "status": 200,
+      "redirect": null,
+      "title": "Cannabis Accessories Ottawa — Grinders, Papers, Lighters &amp; More | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/items/add-ons",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Accessories"
+        },
+        {
+          "level": 3,
+          "text": "AMNESIA HAZE 1G SAT PRE-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "LAUGHING BUDDHA 1G SAT PRE-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "MAUI WOWIE 1G SAT PRE-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "PINK ANIMAL 1G IND PRE-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "PINK GODFATHER OG 1G IND PRE-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "PINK KUSH 1G IND PR-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "PINK PREDATOR 1G IND PRE-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "RAW PAPER KING SIZE"
+        },
+        {
+          "level": 3,
+          "text": "STRAWBERRY COUGH 1G SAT PRE-ROLL"
+        },
+        {
+          "level": 2,
+          "text": "Cannabis Accessories Ottawa — Grinders, Papers, Lighters &amp; More | Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "level": 3,
+          "text": "Visit Spirit Corner Cannabis"
+        }
+      ],
+      "faqs": [
+        "What accessory details can I compare?"
+      ],
+      "approxBodyWords": 193,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/items/prerolls",
+      "status": 200,
+      "redirect": null,
+      "title": "Pre-Rolls Ottawa — Ready-to-Smoke Cannabis Joints | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/items/prerolls",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Pre-Rolls"
+        },
+        {
+          "level": 3,
+          "text": "KNOCK OUT INFUSED PREROLLS x2 each"
+        },
+        {
+          "level": 3,
+          "text": "MOONROCKETS HYB, IND, SAT"
+        },
+        {
+          "level": 3,
+          "text": "AMNESIA HAZE 1G SAT PRE-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "LAUGHING BUDDHA 1G SAT PRE-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "MAUI WOWIE 1G SAT PRE-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "PINK ANIMAL 1G IND PRE-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "PINK GODFATHER OG 1G IND PRE-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "PINK KUSH 1G IND PR-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "PINK PREDATOR 1G IND PRE-ROLL"
+        },
+        {
+          "level": 3,
+          "text": "RAW PAPER KING SIZE"
+        },
+        {
+          "level": 3,
+          "text": "STRAWBERRY COUGH 1G SAT PRE-ROLL"
+        },
+        {
+          "level": 2,
+          "text": "Pre-Rolls Ottawa — Ready-to-Smoke Cannabis Joints | Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "level": 3,
+          "text": "Visit Spirit Corner Cannabis"
+        }
+      ],
+      "faqs": [
+        "What pre-roll details can I compare?",
+        "Can pre-roll listings change?"
+      ],
+      "approxBodyWords": 237,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/items/magic",
+      "status": 200,
+      "redirect": null,
+      "title": "Magic Stuff - Specialty Items | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/items/magic",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Magic Stuff"
+        },
+        {
+          "level": 3,
+          "text": "MINDFCK CHOCO 8000MG"
+        },
+        {
+          "level": 3,
+          "text": "MINDFCK GUMMIES BAR 5000MG"
+        },
+        {
+          "level": 3,
+          "text": "TRIPNOTIK CHOCO 5000MG"
+        },
+        {
+          "level": 3,
+          "text": "TRIPNOTIK GUMMIES 4000MG"
+        },
+        {
+          "level": 2,
+          "text": "Magic Stuff - Specialty Items | Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "level": 3,
+          "text": "Visit Spirit Corner Cannabis"
+        }
+      ],
+      "faqs": [
+        "What specialty item details can I compare?",
+        "Can specialty listings change?"
+      ],
+      "approxBodyWords": 144,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/items/cigarettes",
+      "status": 200,
+      "redirect": null,
+      "title": "Native Cigarettes Ottawa — Discount Tobacco | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/items/cigarettes",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Cigarettes"
+        },
+        {
+          "level": 3,
+          "text": "ROLLED GOLD LIGHTS"
+        },
+        {
+          "level": 3,
+          "text": "BACKWOODS ASSORTED FLAVORS $20-$25"
+        },
+        {
+          "level": 3,
+          "text": "BB FULL CARTON"
+        },
+        {
+          "level": 3,
+          "text": "BB LIGHTS CARTON"
+        },
+        {
+          "level": 3,
+          "text": "CANADIAN CLASSICS SILVER"
+        },
+        {
+          "level": 3,
+          "text": "CANADIAN GOOSE FULL"
+        },
+        {
+          "level": 3,
+          "text": "CANADIAN GOOSE LIGHTS"
+        },
+        {
+          "level": 3,
+          "text": "CANADIAN LIGHTS"
+        },
+        {
+          "level": 3,
+          "text": "CANADIAN MENTHOL"
+        },
+        {
+          "level": 3,
+          "text": "GRABBA"
+        },
+        {
+          "level": 3,
+          "text": "GRABBA SHAKER RedRose / Red Herring"
+        },
+        {
+          "level": 3,
+          "text": "NEW BACKWOODS FLAVORS"
+        },
+        {
+          "level": 3,
+          "text": "NEXUS FULL"
+        },
+        {
+          "level": 3,
+          "text": "NEXUS LIGHTS"
+        },
+        {
+          "level": 3,
+          "text": "NICOTINE POUCHES , VELO, PABLO, KILLA"
+        },
+        {
+          "level": 3,
+          "text": "PUTTERS"
+        },
+        {
+          "level": 3,
+          "text": "TIME FULL"
+        },
+        {
+          "level": 3,
+          "text": "ZPods / ZPODS – Mango Pineapple (3×2 mL pods, 5% synthetic nic)"
+        },
+        {
+          "level": 2,
+          "text": "Native Cigarettes Ottawa — Discount Tobacco | Spirit Corner Cannabis"
+        },
+        {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "level": 3,
+          "text": "Visit Spirit Corner Cannabis"
+        }
+      ],
+      "faqs": [
+        "What cigarette details can I compare?",
+        "Can cigarette listings change?"
+      ],
+      "approxBodyWords": 274,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/resources/downtown-ottawa-menu-guide",
+      "status": 200,
+      "redirect": null,
+      "title": "Downtown Ottawa Cannabis Menu Guide | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/resources/downtown-ottawa-menu-guide",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Downtown Ottawa Menu Guide"
+        },
+        {
+          "level": 2,
+          "text": "Compare Product Formats"
+        },
+        {
+          "level": 2,
+          "text": "Listings Can Change"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 136,
+      "links": [
+        "/resources/flower-shelf-guide",
+        "/items/prerolls",
+        "/items/edibles",
+        "/items/vapes",
+        "/items/concentrates",
+        "/items/magic"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/resources/byward-lowertown-visit-guide",
+      "status": 200,
+      "redirect": null,
+      "title": "ByWard Market And Lowertown Cannabis Visit Guide | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/resources/byward-lowertown-visit-guide",
+      "headings": [
+        {
+          "level": 1,
+          "text": "ByWard Market And Lowertown Visit Guide"
+        },
+        {
+          "level": 2,
+          "text": "Check Directions From Your Starting Point"
+        },
+        {
+          "level": 2,
+          "text": "Call Ahead For A Particular Listing"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 139,
+      "links": [
+        "/weed-dispensary-ottawa",
+        "/resources/downtown-ottawa-menu-guide",
+        "/contact"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/resources",
+      "status": 200,
+      "redirect": null,
+      "title": "Downtown Ottawa Cannabis Guides | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/resources",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Spirit Corner Cannabis Resources"
+        },
+        {
+          "level": 2,
+          "text": "Open 24 Hours Near ByWard Market"
+        },
+        {
+          "level": 2,
+          "text": "Compare Listings Before Travelling"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 177,
+      "links": [
+        "/resources/byward-lowertown-visit-guide",
+        "/resources/downtown-ottawa-menu-guide",
+        "/resources/flower-shelf-guide",
+        "/resources/gatineau-hull-route-guide",
+        "/resources/smoke-accessory-guide"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/info/ottawa-weed-dispensary",
+      "status": 200,
+      "redirect": null,
+      "title": "24 Hour Cannabis Store in Downtown Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/info/ottawa-weed-dispensary",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Spirit Corner Cannabis in Downtown Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Visit Spirit Corner Cannabis"
+        },
+        {
+          "level": 2,
+          "text": "Compare Five Flower Tiers"
+        },
+        {
+          "level": 2,
+          "text": "More Store Categories"
+        },
+        {
+          "level": 2,
+          "text": "Open 24 Hours Near ByWard Market"
+        },
+        {
+          "level": 2,
+          "text": "Call Before You Visit"
+        },
+        {
+          "level": 2,
+          "text": "Compare Five Flower Tiers"
+        },
+        {
+          "level": 2,
+          "text": "Visit 251 Dalhousie St"
+        },
+        {
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "faqs": [
+        "Where is Spirit Corner Cannabis located?",
+        "What are the store hours?",
+        "What flower tiers are listed?",
+        "Can listings change?"
+      ],
+      "approxBodyWords": 336,
+      "links": [
+        "/exotic",
+        "/premium",
+        "/aaa",
+        "/aa",
+        "/budget"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/resources/gatineau-hull-route-guide",
+      "status": 200,
+      "redirect": null,
+      "title": "Gatineau And Hull Route Guide | Spirit Corner Cannabis Ottawa",
+      "canonical": "https://spiritcornercannabis.com/resources/gatineau-hull-route-guide",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Gatineau And Hull Route Guide"
+        },
+        {
+          "level": 2,
+          "text": "Use Current Bridge Directions"
+        },
+        {
+          "level": 2,
+          "text": "The Store Is In Ottawa"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 125,
+      "links": [
+        "/weed-dispensary-ottawa",
+        "/resources/downtown-ottawa-menu-guide",
+        "/resources/byward-lowertown-visit-guide"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/resources/flower-shelf-guide",
+      "status": 200,
+      "redirect": null,
+      "title": "Exotic Premium AAA AA Budget Flower Tier Guide | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/resources/flower-shelf-guide",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Spirit Corner Flower Tier Guide"
+        },
+        {
+          "level": 2,
+          "text": "Flower Details At A Glance"
+        },
+        {
+          "level": 2,
+          "text": "Call Before A Product-Specific Trip"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 115,
+      "links": [
+        "/exotic",
+        "/premium",
+        "/aaa",
+        "/aa",
+        "/budget"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/resources/smoke-accessory-guide",
+      "status": 200,
+      "redirect": null,
+      "title": "Ottawa Cigarette Vape And Accessory Guide | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/resources/smoke-accessory-guide",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Spirit Corner Smoke And Accessory Guide"
+        },
+        {
+          "level": 2,
+          "text": "Compare Smoke Products Before Visiting"
+        },
+        {
+          "level": 2,
+          "text": "Visit The Downtown Ottawa Store"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 131,
+      "links": [
+        "/items/cigarettes",
+        "/items/vapes",
+        "/grabba-leaf-shakers",
+        "/items/add-ons",
+        "/nicotine-pouches-ottawa"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/info/dispensary-near-me-ottawa",
+      "status": 200,
+      "redirect": null,
+      "title": "Cannabis Dispensary Near Me Ottawa — Open 24 Hours | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/info/dispensary-near-me-ottawa",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Cannabis Dispensary Near Me — Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Downtown Ottawa Cannabis Store Near ByWard Market"
+        },
+        {
+          "level": 2,
+          "text": "Compare Flower and Other Categories"
+        },
+        {
+          "level": 2,
+          "text": "Call Before A Product-Specific Visit"
+        },
+        {
+          "level": 2,
+          "text": "Compare Five Flower Tiers"
+        },
+        {
+          "level": 2,
+          "text": "Visit 251 Dalhousie St"
+        },
+        {
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "faqs": [
+        "Where is Spirit Corner Cannabis?",
+        "Is Spirit Corner Cannabis open 24 hours?",
+        "Can listings change?"
+      ],
+      "approxBodyWords": 271,
+      "links": [
+        "/exotic",
+        "/premium",
+        "/aaa",
+        "/aa",
+        "/budget"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/info/weed-store-near-gatineau",
+      "status": 200,
+      "redirect": null,
+      "title": "Cannabis Dispensary Near Gatineau — Open 24 Hours | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/info/weed-store-near-gatineau",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Dispensary Near Gatineau: 24 Hours"
+        },
+        {
+          "level": 2,
+          "text": "Cannabis Dispensary Near Gatineau, Quebec"
+        },
+        {
+          "level": 2,
+          "text": "Visiting From Hull, Aylmer, Gatineau, or Chelsea"
+        },
+        {
+          "level": 2,
+          "text": "Open 24 Hours at 251 Dalhousie Street"
+        },
+        {
+          "level": 2,
+          "text": "Compare Five Flower Tiers Before Your Visit"
+        },
+        {
+          "level": 2,
+          "text": "Call Before Crossing the Ottawa River"
+        },
+        {
+          "level": 2,
+          "text": "Compare Five Flower Tiers"
+        },
+        {
+          "level": 2,
+          "text": "Visit 251 Dalhousie St"
+        },
+        {
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "faqs": [
+        "Is Spirit Corner Cannabis located in Gatineau?",
+        "Is Spirit Corner Cannabis open 24 hours?",
+        "Can I visit from Hull, Aylmer, or Chelsea?",
+        "What can I compare before visiting?"
+      ],
+      "approxBodyWords": 417,
+      "links": [
+        "/exotic",
+        "/premium",
+        "/aaa",
+        "/aa",
+        "/budget"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/info/cheap-weed-ottawa",
+      "status": 200,
+      "redirect": null,
+      "title": "Cheap Weed Ottawa — Budget Flower | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/info/cheap-weed-ottawa",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Cheap Weed Ottawa — Budget Cannabis"
+        },
+        {
+          "level": 2,
+          "text": "Compare Budget Flower in Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Listed Sizes and Prices"
+        },
+        {
+          "level": 2,
+          "text": "Open 24 Hours on Dalhousie Street"
+        },
+        {
+          "level": 2,
+          "text": "Compare Five Flower Tiers"
+        },
+        {
+          "level": 2,
+          "text": "Visit 251 Dalhousie St"
+        },
+        {
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "faqs": [
+        "What details can I compare for Budget flower?",
+        "Can Budget listings and prices change?",
+        "Where is Spirit Corner Cannabis?"
+      ],
+      "approxBodyWords": 284,
+      "links": [
+        "/exotic",
+        "/premium",
+        "/aaa",
+        "/aa",
+        "/budget"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/info/native-cigarettes-ottawa",
+      "status": 200,
+      "redirect": null,
+      "title": "Native Cigarettes Ottawa | Spirit Corner Cannabis",
+      "canonical": "https://spiritcornercannabis.com/info/native-cigarettes-ottawa",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Native Cigarettes Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Native Cigarette Listings in Ottawa"
+        },
+        {
+          "level": 2,
+          "text": "Visit Near ByWard Market"
+        },
+        {
+          "level": 2,
+          "text": "Call Ahead for a Particular Brand"
+        },
+        {
+          "level": 2,
+          "text": "Compare Five Flower Tiers"
+        },
+        {
+          "level": 2,
+          "text": "Visit 251 Dalhousie St"
+        },
+        {
+          "level": 2,
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "faqs": [
+        "What cigarette details can I compare?",
+        "Are cigarette listings guaranteed?",
+        "When is Spirit Corner Cannabis open?",
+        "Where is Spirit Corner located?"
+      ],
+      "approxBodyWords": 291,
+      "links": [
+        "/exotic",
+        "/premium",
+        "/aaa",
+        "/aa",
+        "/budget"
+      ]
+    },
+    {
+      "kind": "page",
+      "route": "/blog/architecture-audit",
+      "status": 308,
+      "redirect": "/",
+      "headings": [],
+      "faqs": [],
+      "approxBodyWords": 1,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/blog",
+      "status": 308,
+      "redirect": "/",
+      "headings": [],
+      "faqs": [],
+      "approxBodyWords": 1,
+      "links": []
+    },
+    {
+      "kind": "page",
+      "route": "/contact-spirit-corner-cannabis",
+      "status": 200,
+      "redirect": null,
+      "title": "Contact, Hours, and Directions",
+      "canonical": "https://spiritcornercannabis.com/contact-spirit-corner-cannabis",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Contact Spirit Corner Cannabis"
+        },
+        {
+          "level": 2,
+          "text": "Send Us a Message"
+        },
+        {
+          "level": 2,
+          "text": "Visit the Store"
+        }
+      ],
+      "faqs": [],
+      "approxBodyWords": 101,
+      "links": [
+        "/dispensaire-cannabis-pres-de-gatineau",
+        "/cheap-weed-ottawa",
+        "/24-hour-ottawa-dispensary"
+      ]
+    }
+  ]
+}

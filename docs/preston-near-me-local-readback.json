@@ -1,0 +1,91 @@
+{
+  "date": "2026-09-06",
+  "environment": "local-production-build",
+  "variant": "PRESTON_NEAR_ME_50KM_VARIANT_V1",
+  "results": [
+    {
+      "path": "/weed-dispensary-near-me",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "path": "/dispensaire-cannabis-pres-de-moi",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "path": "/info/weed-dispensary-near-me",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "path": "/info/weed-store-near-gatineau",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "path": "/info/dispensary-near-me",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "path": "/contact",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": null
+    },
+    {
+      "path": "/faq",
+      "checks": 12,
+      "failed": [],
+      "faqs": 5,
+      "radius": null
+    },
+    {
+      "path": "/delivery",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": null
+    },
+    {
+      "path": "/resources",
+      "checks": 12,
+      "failed": [],
+      "faqs": 0,
+      "radius": null
+    },
+    {
+      "path": "/resources/first-visit",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "path": "/resources/gatineau-hull-route-guide",
+      "checks": 12,
+      "failed": [],
+      "faqs": 3,
+      "radius": 50000
+    },
+    {
+      "redirect": 308,
+      "location": "/weed-dispensary-near-me?qa=keep",
+      "redirectPass": true,
+      "emptySitemap": true,
+      "failures": 0
+    }
+  ]
+}

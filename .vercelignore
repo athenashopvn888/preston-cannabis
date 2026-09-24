@@ -1,0 +1,15 @@
+.git
+.next
+*.tsbuildinfo
+node_modules
+.env*
+.vercel-auth-preston
+docs
+tests
+scripts/with-source.mjs
+scripts/export-artwork.mjs
+scripts/export-artwork-v2.mjs
+scripts/provision-approved-vercel.mjs
+scripts/audit-scc-reference.mjs
+scripts/audit-scc-live.mjs
+scripts/verify-landings.mjs
