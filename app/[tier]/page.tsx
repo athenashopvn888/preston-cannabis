@@ -4,7 +4,7 @@ import MenuGrid from "@/components/MenuGrid";
 import { Breadcrumbs } from "@/components/Chrome";
 import StructuredData from "@/components/StructuredData";
 import { getMenu } from "@/lib/menu";
-import { TIERS, meta, PREVIEW_NOTICE, SITE } from "@/lib/site";
+import { TIERS, meta, SITE } from "@/lib/site";
 import EditorialArtwork from "@/components/EditorialArtwork";
 import { ARTWORK } from "@/lib/artwork";
 import { TIER_COPY } from "@/lib/editorial";
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props) {
   const { tier } = await params;
   const t = TIERS.find((v) => v.slug === tier);
   const title = tierSeoTitle(t?.name || "Weed");
-  const metadata = meta(title, TIER_COPY[tier]?.description || "Explore the Preston Cannabis menu preview.", `/${tier}`);
+  const metadata = meta(title, TIER_COPY[tier]?.description || "Explore the Preston Cannabis menu.", `/${tier}`);
   return { ...metadata, title: { absolute: title }, openGraph: { ...metadata.openGraph, title } };
 }
 
@@ -46,7 +46,6 @@ export default async function TierPage({ params }: Props) {
         <span className="eyebrow">PRESTON STREET FLOWER</span>
         <h1>{h1}</h1>
         <p>{copy.intro}</p>
-        <p className="quiet-note">{PREVIEW_NOTICE}</p>
       </div>
       <EditorialArtwork asset={ARTWORK.tiers[t.slug]} className="tier-introduction-art"/>
     </div>

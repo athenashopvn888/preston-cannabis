@@ -28,7 +28,7 @@ export function Footer() {
         <a href={SITE.tel}>{SITE.phone}</a>
       </div>
       <nav aria-label="Footer navigation">
-        <Link href="/menu">Menu preview</Link>
+        <Link href="/menu">Menu</Link>
         <Link href="/visit">Visit & directions</Link>
         <Link href="/hours">Hours guidance</Link>
         <Link href="/native-cigarettes">Native cigarettes</Link>

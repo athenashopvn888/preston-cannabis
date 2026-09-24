@@ -1,6 +1,6 @@
 ﻿import Link from "next/link";
 import { Breadcrumbs } from "@/components/Chrome";
-import { meta, SITE, PREVIEW_NOTICE } from "@/lib/site";
+import { meta, SITE } from "@/lib/site";
 import { jsonLd, simplePageGraph } from "@/lib/landing-schema.mjs";
 import { NATIVE_CIG_COPY } from "@/lib/content-hub.mjs";
 
@@ -16,7 +16,6 @@ export default function NativeCigarettesPage() {
       <span className="eyebrow">MERCHANDISE CATEGORY</span>
       <h1>{NATIVE_CIG_COPY.h1}</h1>
       <p>{NATIVE_CIG_COPY.intro}</p>
-      <p className="quiet-note">{PREVIEW_NOTICE}</p>
     </div>
     {NATIVE_CIG_COPY.sections.map((section) => (
       <article key={section.heading} style={{marginBottom: 28}}>
