@@ -11,7 +11,7 @@ export const PREVIEW_NOTICE = "All current catalog entries are temporary CHC01 p
 export const canonical = (path = "/") => `${SITE.domain}${path === "/" ? "" : path.replace(/\/$/, "")}`;
 export function meta(title: string, description: string, path = "/"): Metadata {
   return { title, description, alternates: { canonical: canonical(path) }, robots: { index: INDEXABLE, follow: INDEXABLE },
-    openGraph: { title: `${title} | ${SITE.name}`, description, url: canonical(path), siteName: SITE.name, locale: "en_CA", type: "website", images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Preston Cannabis — Ottawa" }] },
+    openGraph: { title, description, url: canonical(path), siteName: SITE.name, locale: "en_CA", type: "website", images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Preston Cannabis — Ottawa" }] },
     twitter: { card: "summary_large_image", title, description, images: ["/opengraph-image"] } };
 }
 export const CATEGORIES = [
@@ -26,9 +26,9 @@ export const CATEGORIES = [
 ] as const;
 export { TIERS } from "./tiers.mjs";
 export const FAQS = [
-  ["Where is Preston Cannabis?", `The proposed Preston location is ${SITE.fullAddress}. Store details are being prepared for launch.`],
-  ["Is this Preston’s live inventory?", "Not yet. This preview uses the CHC01 menu temporarily. Products, prices and quantities are not confirmed for Preston."],
-  ["How can I contact the store?", `Call ${SITE.phone} for questions about Preston Cannabis.`],
-  ["Where can I find store hours?", "Confirmed Preston opening hours will be added when available. Please call before planning a visit."],
+  ["Where is Preston Cannabis?", "Preston Cannabis is at 268 Preston St, Ottawa, ON K1R 7R5, in Little Italy between Carling and Somerset West."],
+  ["Is this Preston's live inventory?", "Not yet. This preview uses the CHC01 menu temporarily. Products, prices and quantities are not confirmed for Preston."],
+  ["How can I contact the store?", "Call 343-804-9020 for questions about Preston Cannabis."],
+  ["Where can I find store hours?", "Call 343-804-9020 before planning a visit. This website does not claim 24-hour opening for Preston Cannabis."],
   ["Is delivery available?", "Preston pickup and delivery details have not been confirmed. Contact the store before making arrangements."],
 ];
