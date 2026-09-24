@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 export const SITE = {
-  name: "Preston Cannabis", address: "268 Preston St", city: "Ottawa", province: "ON", postalCode: "K1R 7R5",
-  fullAddress: "268 Preston St, Ottawa, ON K1R 7R5", phone: "343-804-9020", tel: "tel:+13438049020",
-  domain: "https://prestoncannabis.com", maps: "https://www.google.com/maps/search/?api=1&query=268%20Preston%20St%2C%20Ottawa%2C%20ON%20K1R%207R5",
+  name: "Preston Cannabis", address: "268 Preston St", city: "Ottawa", province: "ON", postalCode: "K1R 7R6",
+  fullAddress: "268 Preston St, Ottawa, ON K1R 7R6", phone: "343-804-9020", tel: "tel:+13438049020",
+  domain: "https://prestoncannabis.com", maps: "https://www.google.com/maps/search/?api=1&query=268%20Preston%20St%2C%20Ottawa%2C%20ON%20K1R%207R6",
   pod: "POD 9", storeCode: "TPC01",
 } as const;
 // TPC01-INDEX-GOLIVE: indexability enabled for canonical public routes after NAP/robots release.
@@ -25,7 +25,7 @@ export const CATEGORIES = [
 ] as const;
 export { TIERS } from "./tiers.mjs";
 export const FAQS = [
-  ["Where is Preston Cannabis?", "Preston Cannabis is at 268 Preston St, Ottawa, ON K1R 7R5, in Little Italy between Carling and Somerset West."],
+  ["Where is Preston Cannabis?", "Preston Cannabis is at 268 Preston St, Ottawa, ON K1R 7R6, in Little Italy between Carling and Somerset West."],
   ["Is this Preston's live inventory?", "Yes. The menu lists Preston Cannabis products, weights, and prices for this store."],
   ["How can I contact the store?", "Call 343-804-9020 for questions about Preston Cannabis."],
   ["Where can I find store hours?", "Preston Cannabis opens daily at 12 PM. Thursday–Saturday close at 4 AM, Sunday at 2 AM, and Monday–Wednesday at 1 AM (Ottawa local). Call 343-804-9020 for holiday exceptions."],
