@@ -20,12 +20,14 @@ test("all approved links and routes resolve to known owners; no duplicate old ow
   assert.ok(!stableRoutes.includes("/weed-dispensary-ottawa"));
   assert.match(read("next.config.ts"), /source: "\/weed-dispensary-ottawa", destination: "\/weed-dispensary-near-me", permanent: true/);
 });
-test("index go-live enables sitemap and removes sitewide noindex while keeping CHC01 notice", () => {
+test("index go-live enables sitemap and removes sitewide noindex while keeping CHC01 notice", async () => {
   assert.ok(buildSitemap({ indexable: true, domain: "https://prestoncannabis.com", eligibleRoutes: LANDING_ROUTES }).length > 0);
   assert.match(read("lib/site.ts"), /INDEXABLE = true/);
   assert.doesNotMatch(read("next.config.ts"), /noindex, nofollow, noarchive/);
   assert.match(read("lib/site.ts"), /All current catalog entries are temporary CHC01 preview content/);
-  assert.doesNotMatch(read("lib/landing-schema.mjs"), /areaServed|serviceArea|geoMidpoint|latitude|longitude|openingHours|hasOfferCatalog|makesOffer/);
+  const { businessGraph } = await import("../lib/landing-schema.mjs");
+  const live = JSON.stringify(businessGraph({ domain: "https://prestoncannabis.com", name: "Preston Cannabis", address: "268 Preston St", city: "Ottawa", province: "ON", postalCode: "K1R 7R5", phone: "343-804-9020", maps: "https://example.test" }));
+  assert.doesNotMatch(live, /areaServed|serviceArea|geoMidpoint|latitude|longitude|openingHours|hasOfferCatalog|makesOffer/);
 });
 test("resource directory and footer make all approved pages discoverable", () => {
   assert.match(read("components/LandingPage.tsx"), /approvedCopy\.filter/);
