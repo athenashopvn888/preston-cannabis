@@ -5,7 +5,7 @@ import CategoryCollections from "@/components/CategoryCollections";
 import LocalArtwork from "@/components/LocalArtwork";
 import EditorialArtwork from "@/components/EditorialArtwork";
 import { ARTWORK } from "@/lib/artwork";
-import { meta, SITE, PREVIEW_NOTICE } from "@/lib/site";
+import { meta, SITE } from "@/lib/site";
 import { HOME_COPY } from "@/lib/editorial";
 import { CORRIDOR_NEIGHBOURHOODS, HOME_FAQS, HOME_HUB_CARDS, HOURS_STATUS } from "@/lib/content-hub.mjs";
 
@@ -38,7 +38,7 @@ export default function Home() {
 
     <section className="quick-links" aria-label="Store quick links">
       <Link href="/visit"><span>01 / VISIT</span><strong>268 Preston St</strong><small>Little Italy directions →</small></Link>
-      <Link href="/menu"><span>02 / EXPLORE</span><strong>Find your format</strong><small>Browse the menu preview →</small></Link>
+      <Link href="/menu"><span>02 / EXPLORE</span><strong>Find your format</strong><small>Browse the menu →</small></Link>
       <a href={SITE.tel}><span>03 / SAY HELLO</span><strong>{SITE.phone}</strong><small>{HOURS_STATUS.summary}</small></a>
     </section>
 
@@ -91,7 +91,6 @@ export default function Home() {
           <a className="button" href={SITE.maps} target="_blank" rel="noopener noreferrer">Get directions →</a>
           <Link className="text-link" href="/hours">Hours guidance →</Link>
         </div>
-        <p className="quiet-note">{PREVIEW_NOTICE}</p>
       </div>
     </section>
 

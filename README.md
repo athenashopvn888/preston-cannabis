@@ -6,9 +6,9 @@ New isolated Next.js 16 storefront; executor Agent X. Green/ivory PC-leaf visual
 
 Use Node 22 or newer. `npm install`, then `npm run dev`. `npm run build` builds the deployment. `npm test`, `npm run check`, and `npm run lint` verify the core adapter and app.
 
-Set only the approved `APPS_SCRIPT_URL` in ignored `.env.local`, and `MENU_STORE_CODE=CHC01`. On DESK, `node scripts/with-source.mjs start` can instead inject that one approved endpoint directly into the process without creating a secret file. Server runtime requests `?store=CHC01`; response identity mismatch rejects data, errors never fabricate stock. No endpoint or secret is sent to the client. The normalized public preview endpoint is `/api/menu`. The current adapter deliberately accepts CHC01 only; switching to Preston requires an approved source-code/identity update, not just an environment change.
+Set `APPS_SCRIPT_URL` in ignored `.env.local`. The storefront requests `?store=TPC01`. A missing `MENU_STORE_CODE`, or a leftover `MENU_STORE_CODE=CHC01`, still resolves to TPC01. Any other store code is rejected. On DESK, `node scripts/with-source.mjs start` can inject the approved endpoint directly into the process without creating a secret file. Response identity mismatch rejects data. Errors never fabricate stock or flower weights. Weights shown are only 3g, 5g, 14g, and 28g, and only when that source price is positive. No endpoint or secret is sent to the client. The normalized public menu endpoint is `/api/menu`.
 
-All menu records are explicitly CHC01 previews. Opening hours, delivery, store code, inventory verification and POD canonical registration remain pending. Contact fields use the latest owner-supplied 286 Preston address; older 268 graphic mockups are excluded.
+Opening hours and delivery details remain phone-confirmed. Contact fields use 268 Preston St.
 
 Indexing is deliberately disabled through metadata, HTTP headers and empty sitemap. Robots allows page crawling so the noindex directives can be observed, while blocking API paths. Indexing cannot be enabled just by an environment variable. See `docs/seo-coverage.md` and `docs/onboarding-manifest.json` for release gates.
 

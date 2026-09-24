@@ -1,6 +1,6 @@
 ﻿import Link from "next/link";
 import { Breadcrumbs } from "@/components/Chrome";
-import { meta, SITE, PREVIEW_NOTICE } from "@/lib/site";
+import { meta, SITE } from "@/lib/site";
 import { jsonLd, simplePageGraph } from "@/lib/landing-schema.mjs";
 import { NICOTINE_VAPE_COPY } from "@/lib/content-hub.mjs";
 
@@ -16,7 +16,6 @@ export default function NicotineVapePage() {
       <span className="eyebrow">NICOTINE PILLAR</span>
       <h1>{NICOTINE_VAPE_COPY.h1}</h1>
       <p>{NICOTINE_VAPE_COPY.intro}</p>
-      <p className="quiet-note">{PREVIEW_NOTICE}</p>
     </div>
     {NICOTINE_VAPE_COPY.sections.map((section) => (
       <article key={section.heading} style={{marginBottom: 28}}>

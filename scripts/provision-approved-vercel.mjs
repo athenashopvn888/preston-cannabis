@@ -11,7 +11,7 @@ if (!match) throw new Error("Approved source key missing");
 const endpoint = match[1].trim().replace(/^['"]|['"]$/g, "");
 const url = new URL(endpoint);
 if (url.protocol !== "https:" || !["script.google.com", "script.googleusercontent.com"].includes(url.hostname)) throw new Error("Source host rejected");
-for (const [key, value] of [["APPS_SCRIPT_URL", endpoint], ["MENU_STORE_CODE", "CHC01"]]) {
+for (const [key, value] of [["APPS_SCRIPT_URL", endpoint], ["MENU_STORE_CODE", "TPC01"]]) {
   const command = `vercel.cmd env add ${key} production,preview --sensitive --yes --project ${project} --scope ${team} --global-config .vercel-auth-preston`;
   const result = spawnSync("cmd.exe", ["/d", "/s", "/c", command], { input: value, encoding: "utf8", windowsHide: true, env: { ...process.env, NODE_OPTIONS: "--use-system-ca", VERCEL_TELEMETRY_DISABLED: "1" } });
   if (result.status !== 0) throw new Error(`Provisioning failed for ${key}; output suppressed to protect source values`);

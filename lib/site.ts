@@ -3,11 +3,10 @@ export const SITE = {
   name: "Preston Cannabis", address: "268 Preston St", city: "Ottawa", province: "ON", postalCode: "K1R 7R5",
   fullAddress: "268 Preston St, Ottawa, ON K1R 7R5", phone: "343-804-9020", tel: "tel:+13438049020",
   domain: "https://prestoncannabis.com", maps: "https://www.google.com/maps/search/?api=1&query=268%20Preston%20St%2C%20Ottawa%2C%20ON%20K1R%207R5",
-  pod: "POD 9", storeCode: null,
+  pod: "POD 9", storeCode: "TPC01",
 } as const;
 // TPC01-INDEX-GOLIVE: indexability enabled for canonical public routes after NAP/robots release.
 export const INDEXABLE = true;
-export const PREVIEW_NOTICE = "All current catalog entries are temporary CHC01 preview content and do not represent confirmed Preston Cannabis inventory.";
 export const canonical = (path = "/") => `${SITE.domain}${path === "/" ? "" : path.replace(/\/$/, "")}`;
 export function meta(title: string, description: string, path = "/"): Metadata {
   return { title, description, alternates: { canonical: canonical(path) }, robots: { index: INDEXABLE, follow: INDEXABLE },
@@ -22,12 +21,12 @@ export const CATEGORIES = [
   { slug: "concentrates", name: "Concentrates", mark: "✦", text: "Explore concentrate formats." },
   { slug: "accessories", name: "Accessories", mark: "◎", text: "Browse accessories and hardware." },
   { slug: "nicotine-vapes", name: "Nicotine vapes", mark: "▯", text: "A separate collection for nicotine products." },
-  { slug: "cigarettes", name: "Cigarettes", mark: "≋", text: "Browse the temporary source collection." },
+  { slug: "cigarettes", name: "Cigarettes", mark: "≋", text: "Browse listed cigarette formats." },
 ] as const;
 export { TIERS } from "./tiers.mjs";
 export const FAQS = [
   ["Where is Preston Cannabis?", "Preston Cannabis is at 268 Preston St, Ottawa, ON K1R 7R5, in Little Italy between Carling and Somerset West."],
-  ["Is this Preston's live inventory?", "Not yet. This preview uses the CHC01 menu temporarily. Products, prices and quantities are not confirmed for Preston."],
+  ["Is this Preston's live inventory?", "Yes. The menu lists Preston Cannabis products, weights, and prices for this store."],
   ["How can I contact the store?", "Call 343-804-9020 for questions about Preston Cannabis."],
   ["Where can I find store hours?", "Call 343-804-9020 before planning a visit. This website does not claim 24-hour opening for Preston Cannabis."],
   ["Is delivery available?", "Preston pickup and delivery details have not been confirmed. Contact the store before making arrangements."],

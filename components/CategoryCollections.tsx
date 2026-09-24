@@ -9,6 +9,5 @@ export default function CategoryCollections() {
       <EditorialArtwork asset={ARTWORK.categories[category.slug]} className="category-photo" sizes="(max-width:650px) 42vw, 30vw"/>
       <div className="category-photo-copy"><span className="category-number">0{i + 1}</span><h3>{category.name}</h3><p>{category.text}</p><span className="category-arrow" aria-hidden="true">↗</span></div>
     </Link>)}</div>
-    <p className="quiet-note">Menu preview uses CHC01 temporarily. Preston products, pricing and availability are still to be confirmed.</p>
   </section>;
 }

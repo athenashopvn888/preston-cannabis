@@ -1,1 +1,1 @@
-export default function Loading() { return <main id="main" className="page-wrap"><div className="page-heading" role="status"><span className="eyebrow">PRESTON CANNABIS</span><h2>One moment.</h2><p>Loading the menu preview…</p></div></main>; }
+export default function Loading() { return <main id="main" className="page-wrap"><div className="page-heading" role="status"><span className="eyebrow">PRESTON CANNABIS</span><h2>One moment.</h2><p>Loading the menu…</p></div></main>; }

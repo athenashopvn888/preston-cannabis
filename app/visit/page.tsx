@@ -56,7 +56,7 @@ export default function VisitPage() {
         <Link href="/native-cigarettes">Native cigarettes →</Link>
         <Link href="/nicotine-vape">Nicotine vapes →</Link>
         <Link href="/exotic">Exotic Weed →</Link>
-        <Link href="/menu">Menu preview →</Link>
+        <Link href="/menu">Menu →</Link>
       </nav>
     </aside>
   </main>;
