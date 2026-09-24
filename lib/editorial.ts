@@ -3,7 +3,7 @@ export const HOME_COPY = {
   title: "Preston Cannabis | Cannabis Dispensary Ottawa",
   description: "Preston Cannabis at 268 Preston St, Ottawa. Browse cannabis categories, menu tiers and store information in one clear, easy-to-use local cannabis website.",
   subline: "Cannabis on Preston Street, Ottawa",
-  support: "Find Preston Cannabis at 268 Preston St, Ottawa, ON K1R 7R6. Browse weed categories, compare menu tiers, and get clear store information in one simple local dispensary website.",
+  support: "Find Preston Cannabis at 268 Preston St, Ottawa, ON K1R 7R5. Browse weed categories, compare menu tiers, and get clear store information in one simple local dispensary website.",
 };
 export const TIER_COPY: Record<string, { intro: string; description: string }> = {
   exotic: { intro: "Browse Exotic Weed to compare products within this tier, review listed details and formats, or move between sibling tiers to explore more of the menu.", description: "Browse Exotic Weed at Preston Cannabis in Ottawa and explore a dedicated menu tier designed for quick, clear product browsing." },

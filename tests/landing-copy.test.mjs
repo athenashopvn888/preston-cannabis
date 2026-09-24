@@ -20,10 +20,10 @@ test("all approved links and routes resolve to known owners; no duplicate old ow
   assert.ok(!stableRoutes.includes("/weed-dispensary-ottawa"));
   assert.match(read("next.config.ts"), /source: "\/weed-dispensary-ottawa", destination: "\/weed-dispensary-near-me", permanent: true/);
 });
-test("provisional indexing and preview stock guardrails remain fail closed", () => {
-  assert.deepEqual(buildSitemap({ indexable: false, domain: "https://prestoncannabis.com", eligibleRoutes: LANDING_ROUTES }), []);
-  assert.match(read("lib/site.ts"), /INDEXABLE = false/);
-  assert.match(read("next.config.ts"), /noindex, nofollow, noarchive/);
+test("index go-live enables sitemap and removes sitewide noindex while keeping CHC01 notice", () => {
+  assert.ok(buildSitemap({ indexable: true, domain: "https://prestoncannabis.com", eligibleRoutes: LANDING_ROUTES }).length > 0);
+  assert.match(read("lib/site.ts"), /INDEXABLE = true/);
+  assert.doesNotMatch(read("next.config.ts"), /noindex, nofollow, noarchive/);
   assert.match(read("lib/site.ts"), /All current catalog entries are temporary CHC01 preview content/);
   assert.doesNotMatch(read("lib/landing-schema.mjs"), /areaServed|serviceArea|geoMidpoint|latitude|longitude|openingHours|hasOfferCatalog|makesOffer/);
 });

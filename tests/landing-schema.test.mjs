@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { businessGraph, landingGraph, jsonLd } from "../lib/landing-schema.mjs";
 import { LANDING_ROUTES, GEOGRAPHIC_ROUTES } from "../lib/landing-contract.mjs";
-const site = { domain: "https://prestoncannabis.com", name: "Preston Cannabis", address: "268 Preston St", city: "Ottawa", province: "ON", postalCode: "K1R 7R6", phone: "343-804-9020" };
+const site = { domain: "https://prestoncannabis.com", name: "Preston Cannabis", address: "268 Preston St", city: "Ottawa", province: "ON", postalCode: "K1R 7R5", phone: "343-804-9020" };
 test("one business and website identity, no invented service or inventory facts", () => {
   const graph = businessGraph(site);
   assert.equal(graph["@graph"].filter((n) => n["@type"] === "LocalBusiness").length, 1);
