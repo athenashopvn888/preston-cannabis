@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
 export const SITE = {
-  name: "Preston Cannabis", address: "268 Preston St", city: "Ottawa", province: "ON", postalCode: "K1R 7R6",
-  fullAddress: "268 Preston St, Ottawa, ON K1R 7R6", phone: "343-804-9020", tel: "tel:+13438049020",
-  domain: "https://prestoncannabis.com", maps: "https://www.google.com/maps/search/?api=1&query=268%20Preston%20St%2C%20Ottawa%2C%20ON%20K1R%207R6",
+  name: "Preston Cannabis", address: "268 Preston St", city: "Ottawa", province: "ON", postalCode: "K1R 7R5",
+  fullAddress: "268 Preston St, Ottawa, ON K1R 7R5", phone: "343-804-9020", tel: "tel:+13438049020",
+  domain: "https://prestoncannabis.com", maps: "https://www.google.com/maps/search/?api=1&query=268%20Preston%20St%2C%20Ottawa%2C%20ON%20K1R%207R5",
   pod: "POD 9", storeCode: null,
 } as const;
-// Onboarding is intentionally fail-closed. A future release must explicitly implement
-// and verify Preston-specific source authority before enabling indexability.
-export const INDEXABLE = false;
+// TPC01-INDEX-GOLIVE: indexability enabled for canonical public routes after NAP/robots release.
+export const INDEXABLE = true;
 export const PREVIEW_NOTICE = "All current catalog entries are temporary CHC01 preview content and do not represent confirmed Preston Cannabis inventory.";
 export const canonical = (path = "/") => `${SITE.domain}${path === "/" ? "" : path.replace(/\/$/, "")}`;
 export function meta(title: string, description: string, path = "/"): Metadata {
-  return { title, description, alternates: { canonical: canonical(path) }, robots: { index: false, follow: false },
+  return { title, description, alternates: { canonical: canonical(path) }, robots: { index: INDEXABLE, follow: INDEXABLE },
     openGraph: { title: `${title} | ${SITE.name}`, description, url: canonical(path), siteName: SITE.name, locale: "en_CA", type: "website", images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Preston Cannabis — Ottawa" }] },
     twitter: { card: "summary_large_image", title, description, images: ["/opengraph-image"] } };
 }
