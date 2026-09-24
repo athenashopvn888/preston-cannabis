@@ -26,7 +26,7 @@ export default function Home() {
           <Link className="button cream" href="/menu">Explore the menu <span>→</span></Link>
           <Link className="button ghost" href="/visit">Plan your visit <span>↗</span></Link>
         </div>
-        <div className="hero-caption">268 PRESTON ST <span>·</span> OTTAWA, ON K1R 7R5 <span>·</span> 19+</div>
+        <div className="hero-caption">268 PRESTON ST <span>·</span> OTTAWA, ON K1R 7R6 <span>·</span> 19+</div>
       </div>
       <div className="hero-art" aria-hidden="true">
         <div className="orbit orbit-one"/><div className="orbit orbit-two"/>

@@ -27,7 +27,7 @@ test("index go-live enables sitemap and removes sitewide noindex and the CHC01 p
   assert.doesNotMatch(read("next.config.ts"), /noindex, nofollow, noarchive/);
   assert.doesNotMatch(read("lib/site.ts"), /CHC01|PREVIEW_NOTICE|temporary CHC/);
   const { businessGraph } = await import("../lib/landing-schema.mjs");
-  const live = JSON.stringify(businessGraph({ domain: "https://prestoncannabis.com", name: "Preston Cannabis", address: "268 Preston St", city: "Ottawa", province: "ON", postalCode: "K1R 7R5", phone: "343-804-9020", maps: "https://example.test" }));
+  const live = JSON.stringify(businessGraph({ domain: "https://prestoncannabis.com", name: "Preston Cannabis", address: "268 Preston St", city: "Ottawa", province: "ON", postalCode: "K1R 7R6", phone: "343-804-9020", maps: "https://example.test" }));
   assert.doesNotMatch(live, /areaServed|serviceArea|geoMidpoint|latitude|longitude|hasOfferCatalog|makesOffer/);
 });
 test("resource directory and footer make all approved pages discoverable", () => {

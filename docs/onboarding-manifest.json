@@ -12,7 +12,7 @@
   "allowedSurfaces": ["New isolated project source", "New dedicated Vercel project", "Owner-approved Preston apex and www domains; noindex maintained"],
   "existingChildRepos": "READ_ONLY_REFERENCE",
   "protectedSurfaces": ["FMD", "POD registry", "Command Center", "Existing Vercel projects", "Existing domains", "GBP", "GSC", "Google Sheets", "Apps Script source", "LAP"],
-  "address": "268 Preston St, Ottawa, ON K1R 7R5",
+  "address": "268 Preston St, Ottawa, ON K1R 7R6",
   "phone": "343-804-9020",
   "plannedDomain": "prestoncannabis.com",
   "napAuthority": "Owner explicitly corrected website street number to 268 on 2026-09-06; postal code retained without new confirmation; canonical FMD registration pending",
