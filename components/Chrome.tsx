@@ -1,5 +1,6 @@
 ﻿import Link from "next/link";
 import { SITE } from "@/lib/site";
+import { HOURS_STATUS } from "@/lib/content-hub.mjs";
 import Leaf from "./Leaf";
 
 export function Header() {
@@ -26,6 +27,7 @@ export function Footer() {
         <h2>Find us on Preston.</h2>
         <p>{SITE.fullAddress}</p>
         <a href={SITE.tel}>{SITE.phone}</a>
+        <p className="quiet-note" style={{marginTop: 8}}>{HOURS_STATUS.summary}</p>
       </div>
       <nav aria-label="Footer navigation">
         <Link href="/menu">Menu</Link>
