@@ -5,6 +5,11 @@ import HiringRibbon from "../components/HiringRibbon";
 import TvStoreHeader from "../components/TvStoreHeader";
 import { tvHiring } from "../lib/tvHiring";
 import { formatBoardTime, readStockUpdatedAt } from "../lib/tvStockTime";
+import {
+  getTv2DaytimePromo,
+  isCigaretteOfferVisible,
+  isTv2Daytime,
+} from "./tv2Promos";
 
 /* -- TYPES -- */
 interface Item {
@@ -28,8 +33,8 @@ const fmtTHC = (v?:string) => { const s=String(v||"").trim(); if(!s)return""; if
 const fmtMG = (v?:string) => { const s=String(v||"").trim(); if(!s)return""; if(/^\d+(\.\d+)?$/.test(s))return s+"mg"; return s; };
 
 /* -- ITEM CARD -- */
-function ItemCard({ title, accent, items, hiIdx, preset }: {
-  title:string; accent:string; items:Item[]; hiIdx:number; preset:string;
+function ItemCard({ title, accent, items, hiIdx, preset, offerOverlay = false }: {
+  title:string; accent:string; items:Item[]; hiIdx:number; preset:string; offerOverlay?:boolean;
 }) {
   const MAX = 10;
   const hiW = Math.min(hiIdx % Math.max(1, items.length), items.length - 1);
@@ -130,6 +135,14 @@ function ItemCard({ title, accent, items, hiIdx, preset }: {
           </div>
         </div>
       </div>
+      {offerOverlay && (
+        <div className={styles.timedPromoOverlay} aria-label="Mix and Match 2 Pack $5 Cigarette Offer">
+          <img
+            src="/banners/2pack5cig.webp"
+            alt="Mix and Match 2 Pack $5 Cigarette Offer"
+          />
+        </div>
+      )}
     </div>
   );
 }
@@ -152,7 +165,25 @@ export default function TV2Page() {
   const [highlights, setHighlights] = useState<Record<string,number>>({});
   const [lastUpdate, setLastUpdate] = useState("");
   const [stockUpdated, setStockUpdated] = useState<string | null>(null);
+  const [daytime, setDaytime] = useState(() => isTv2Daytime());
+  const [cigaretteOfferVisible, setCigaretteOfferVisible] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const iv = setInterval(() => setDaytime(isTv2Daytime()), 60_000);
+    return () => clearInterval(iv);
+  }, []);
+
+  useEffect(() => {
+    const startedAt = performance.now();
+    const updateOffer = () => {
+      setCigaretteOfferVisible(
+        isCigaretteOfferVisible(isTv2Daytime(), performance.now() - startedAt),
+      );
+    };
+    const iv = setInterval(updateOffer, 250);
+    return () => clearInterval(iv);
+  }, []);
 
   const loadData = useCallback(async () => {
     try {
@@ -216,10 +247,45 @@ export default function TV2Page() {
           <div className={styles.grid}>
             {CARD_CONFIG.map(card => {
               const filtered = items.filter(card.filter);
+              const promo = getTv2DaytimePromo(card.id, daytime);
+
+              if (promo) {
+                return (
+                  <div
+                    key={card.id}
+                    className={styles.card}
+                    data-promo-card={card.id}
+                    style={{"--accent":card.accent} as React.CSSProperties}
+                  >
+                    <div className={styles.cardHeader}>PROMO</div>
+                    <div className={styles.promoMain}>
+                      <div className={styles.promoViewport}>
+                        <img
+                          className={`${styles.promoImg} ${styles.promoActive}`}
+                          src={promo.src}
+                          alt={promo.alt}
+                          referrerPolicy="no-referrer"
+                          onError={(event) => {
+                            const target = event.currentTarget;
+                            if (
+                              promo.fallbackSrc &&
+                              target.dataset.fallbackApplied !== "true"
+                            ) {
+                              target.dataset.fallbackApplied = "true";
+                              target.src = promo.fallbackSrc;
+                            }
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
 
               return (
                 <ItemCard key={card.id} title={card.title} accent={card.accent}
-                  items={filtered} hiIdx={highlights[card.id]||0} preset={card.preset} />
+                  items={filtered} hiIdx={highlights[card.id]||0} preset={card.preset}
+                  offerOverlay={card.id === "CIGARETTES" && cigaretteOfferVisible} />
               );
             })}
           </div>
