@@ -9,7 +9,7 @@ const require = createRequire(import.meta.url);
 const { buildTvStore, isOpen24Hours7Days } = require("../app/lib/tvStoreFacts.js");
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
-test("in-store boards stay out of the sitemap and off the age gate", () => {
+test("in-store boards stay out of the sitemap and the public site has no age gate", () => {
   assert.equal(stableRoutes.includes("/tv"), false);
   assert.equal(stableRoutes.includes("/tv2"), false);
   for (const path of ["app/tv/layout.tsx", "app/tv2/layout.tsx"]) {
@@ -17,7 +17,7 @@ test("in-store boards stay out of the sitemap and off the age gate", () => {
     assert.match(read(path), /follow:\s*false/);
   }
   assert.match(read("components/SiteFrame.tsx"), /path === "\/tv"/);
-  assert.match(read("components/SiteFrame.tsx"), /AgeGate/);
+  assert.doesNotMatch(read("components/SiteFrame.tsx"), /AgeGate/);
   assert.match(read("app/layout.tsx"), /SiteFrame/);
   assert.doesNotMatch(read("app/layout.tsx"), /<AgeGate/);
 });
