@@ -1,7 +1,6 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import AgeGate from "./AgeGate";
 import { Footer, Header } from "./Chrome";
 
 function isTvBoard(path: string) {
@@ -18,7 +17,6 @@ export default function SiteFrame({ children }: { children: React.ReactNode }) {
       <Header />
       {children}
       <Footer />
-      <AgeGate />
     </>
   );
 }
