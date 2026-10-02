@@ -30,7 +30,7 @@ export default function LandingPage({ page }: { page: LandingCopy }) {
       </section>)}
       {!!page.faqs?.length && <section><h2>{page.faqHeading}</h2><div className="faq-list">{page.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></section>}
       {!!page.relatedLinks?.length && <section className="related-links"><h2>{page.relatedHeading}</h2><nav aria-label={page.relatedHeading}>{page.relatedLinks.map((link) => <Link key={link.href} href={link.href}>{link.label}</Link>)}</nav></section>}
-      {page.path === "/resources" && <nav className="landing-directory" aria-label={page.h1}>{approvedCopy.filter((entry) => entry.path !== page.path).map((entry) => <Link key={entry.path} href={entry.path}>{entry.h1}<span aria-hidden="true">→</span></Link>)}</nav>}
+      {page.path === "/resources" && <nav className="landing-directory" aria-label={page.h1}><Link href="/guides">Name Guides<span aria-hidden="true">→</span></Link>{approvedCopy.filter((entry) => entry.path !== page.path).map((entry) => <Link key={entry.path} href={entry.path}>{entry.h1}<span aria-hidden="true">→</span></Link>)}</nav>}
     </article>
   </main>;
 }

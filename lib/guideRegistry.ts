@@ -1,5 +1,9 @@
 import type { Product } from "./menu";
 export type GuideLane = "strain" | "native_cig" | "nic_vape" | "thc_vape";
+export const GUIDE_LANES: ReadonlyArray<{ lane: GuideLane; label: string }> = [
+  { lane: "strain", label: "Strains" }, { lane: "native_cig", label: "Native Cigarettes" },
+  { lane: "nic_vape", label: "Nicotine Vape" }, { lane: "thc_vape", label: "THC Vape" },
+];
 export type GuideEntry = { slug: string; lane: GuideLane; name: string; title: string; menuPath: string; preferredProductSlug?: string; relatedSlugs: string[] };
 type Seed = Omit<GuideEntry, "relatedSlugs">;
 const seeds: Seed[] = [
@@ -32,6 +36,7 @@ const seeds: Seed[] = [
 ];
 export const GUIDE_REGISTRY: GuideEntry[] = seeds.map((seed) => ({ ...seed, relatedSlugs: seeds.filter((row) => row.lane === seed.lane && row.slug !== seed.slug).slice(0, seed.lane === "strain" ? 4 : 3).map((row) => row.slug) }));
 export const getGuide = (slug: string) => GUIDE_REGISTRY.find((guide) => guide.slug === slug);
+export const getGuidesByLane = () => GUIDE_LANES.map(({ lane, label }) => ({ lane, label, guides: GUIDE_REGISTRY.filter((guide) => guide.lane === lane) }));
 export const resolveGuideProduct = (guide: GuideEntry, products: Product[]) => guide.preferredProductSlug ? products.find((product) => product.slug === guide.preferredProductSlug) : undefined;
 export const getTierGuideLinks = (menuPath: string, limit = 6) => GUIDE_REGISTRY.filter((guide) => guide.lane === "strain" && guide.menuPath === menuPath).slice(0, limit);
 export const getCategoryGuideGroups = (menuPath: string) => {
@@ -40,4 +45,3 @@ export const getCategoryGuideGroups = (menuPath: string) => {
   if (menuPath === "/menu/vape-disposables") return [{ label: "THC Vape guides", guides: GUIDE_REGISTRY.filter((guide) => guide.lane === "thc_vape").slice(0, 8) }];
   return [];
 };
-

@@ -10,5 +10,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     modifiedByRoute: {},
   });
   const guides = GUIDE_REGISTRY.map((guide) => ({ url: `${SITE.domain}/guides/${guide.slug}` }));
-  return [...rows, ...guides] as MetadataRoute.Sitemap;
+  return [...rows, { url: `${SITE.domain}/guides` }, ...guides] as MetadataRoute.Sitemap;
 }
