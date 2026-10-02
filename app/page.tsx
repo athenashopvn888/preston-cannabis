@@ -14,6 +14,10 @@ export const metadata = { ...homeMetadata, title: { absolute: HOME_COPY.title },
 
 export default function Home() {
   return <main id="main">
+    <Link href="/items/cigarettes" data-belmont-mix-match-banner="" aria-label="BELMONT KING SIZE $10 - 2PACK BB $5 MIX & MATCH">
+      <span data-belmont-offer-lead="">BELMONT KING SIZE $10 -</span>
+      <span data-belmont-offer-tail=""> 2PACK BB $5 MIX &amp; MATCH</span>
+    </Link>
     <section className={`hero ${ARTWORK.hero ? "hero-photographic" : ""}`}>
       {ARTWORK.hero && <EditorialArtwork asset={ARTWORK.hero} className="hero-background" priority/>}
       <div className="hero-lines" aria-hidden="true"/>

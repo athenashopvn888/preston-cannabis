@@ -1,2 +1,11 @@
 .article{max-width:920px;margin:0 auto;display:grid;gap:20px}.hero,.article section{padding:clamp(24px,5vw,46px);border:1px solid rgba(8,62,41,.18);border-radius:24px;background:#fff}.hero h1{font-size:clamp(2.1rem,6vw,4.2rem);line-height:1.03}.hero p,.article section p,.article li{line-height:1.75;color:#405149}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.actions a,.related a{padding:12px 16px;border:1px solid #1d6a4a;border-radius:12px;text-decoration:none;font-weight:700}.related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.related a{display:flex;flex-direction:column}.related small{font-weight:500}.article details{padding:14px 0;border-top:1px solid rgba(8,62,41,.18)}.article summary{font-weight:800;cursor:pointer}.guideStrip{margin-block:28px;padding:22px;border:1px solid rgba(8,62,41,.18);border-radius:18px;background:#fff}.guideLinks{display:flex;flex-wrap:wrap;gap:9px}.guideLinks a{padding:8px 12px;border:1px solid #1d6a4a;border-radius:999px;text-decoration:none;font-weight:700}@media(max-width:640px){.related{grid-template-columns:1fr}.actions a{width:100%}}
 
+
+.body > :first-child { margin-top: 0; }
+.body > :last-child { margin-bottom: 0; }
+.body h2 { margin: 34px 0 14px; font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -.02em; }
+.body h3 { margin: 24px 0 10px; font-size: clamp(1.08rem, 2vw, 1.3rem); }
+.body p, .body li { color: #46534b; line-height: 1.75; }
+.body p { margin: 0 0 16px; }
+.body ul { display: grid; gap: 8px; margin: 0 0 20px; padding-left: 22px; }
+.body strong { color: #172019; }
