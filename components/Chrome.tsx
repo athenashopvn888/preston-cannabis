@@ -13,6 +13,8 @@ export function Header() {
         <Link href="/visit">Visit</Link>
         <Link href="/native-cigarettes">Native cigarettes</Link>
         <Link href="/faq">FAQs</Link>
+        <Link href="/resources">Resources</Link>
+        <Link href="/guides">Guides</Link>
       </nav>
       <a className="header-call" href={SITE.tel}>{SITE.phone} <span aria-hidden="true">→</span></a>
     </header>
@@ -38,6 +40,7 @@ export function Footer() {
         <Link href="/contact">Contact</Link>
         <Link href="/faq">Questions & answers</Link>
         <Link href="/resources">Resources</Link>
+        <Link href="/guides">Guides</Link>
         <Link href="/delivery">Delivery information</Link>
       </nav>
     </div>
