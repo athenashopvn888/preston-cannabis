@@ -10,6 +10,8 @@ import { ARTWORK } from "@/lib/artwork";
 import { TIER_COPY } from "@/lib/editorial";
 import { tierSeoTitle, tierH1 } from "@/lib/tiers.mjs";
 import { jsonLd, tierCollectionGraph } from "@/lib/landing-schema.mjs";
+import { getTierGuideLinks } from "@/lib/guideRegistry";
+import guideStyles from "../guides/[slug]/guide.module.css";
 
 export const dynamic = "force-dynamic";
 type Props = { params: Promise<{ tier: string }> };
@@ -38,6 +40,7 @@ export default async function TierPage({ params }: Props) {
     faqs: copy.faqs,
   });
   const items = [{ name: "Flower", href: "/menu/flower" }, { name: t.name, href: `/${tier}` }];
+  const guideLinks = getTierGuideLinks(`/${tier}`);
   return <main id="main" className="page-wrap">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}/>
     <Breadcrumbs items={items}/><StructuredData items={items}/>
@@ -50,6 +53,7 @@ export default async function TierPage({ params }: Props) {
       <EditorialArtwork asset={ARTWORK.tiers[t.slug]} className="tier-introduction-art"/>
     </div>
     <MenuGrid menu={menu} category="flower" tier={t.inventoryTier}/>
+    {guideLinks.length > 0 && <section className={guideStyles.guideStrip} aria-label="Popular strain guides"><h2>Popular strain guides</h2><div className={guideStyles.guideLinks}>{guideLinks.map((guide) => <Link key={guide.slug} href={`/guides/${guide.slug}`}>{guide.name}</Link>)}</div></section>}
     <section className="faq-section" style={{paddingInline: 0}}>
       <div><span className="eyebrow">TIER FAQ</span><h2>{t.name}<br/><em>questions.</em></h2></div>
       <div className="faq-list">{copy.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}<span>+</span></summary><p>{faq.answer}</p></details>)}</div>

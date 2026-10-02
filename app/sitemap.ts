@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { buildSitemap, stableRoutes } from "@/lib/route-registry.mjs";
 import { INDEXABLE, SITE } from "@/lib/site";
+import { GUIDE_REGISTRY } from "@/lib/guideRegistry";
 export default function sitemap(): MetadataRoute.Sitemap {
   const rows = buildSitemap({
     indexable: INDEXABLE,
@@ -8,5 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     eligibleRoutes: [...stableRoutes],
     modifiedByRoute: {},
   });
-  return rows as MetadataRoute.Sitemap;
+  const guides = GUIDE_REGISTRY.map((guide) => ({ url: `${SITE.domain}/guides/${guide.slug}` }));
+  return [...rows, ...guides] as MetadataRoute.Sitemap;
 }
