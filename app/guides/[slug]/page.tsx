@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { getMenu } from "@/lib/menu";
 import { GUIDE_REGISTRY, GUIDE_STORE, getGuide, resolveGuideProduct, type GuideEntry } from "@/lib/guideRegistry";
 import GuideBody, { stripMarkdown } from "./GuideBody";
+import { DELIVERY_GUIDE_REGISTRY, getDeliveryGuide } from "../../lib/deliveryGuideRegistry";
+import DeliveryGuidePage from "./DeliveryGuidePage";
 import styles from "./guide.module.css";
 
 const BASE = `https://${GUIDE_STORE.domain}`;
@@ -16,10 +18,13 @@ const laneCopy = {
 } as const;
 
 export const dynamicParams = false;
-export function generateStaticParams() { return GUIDE_REGISTRY.map((guide) => ({ slug: guide.slug })); }
+export function generateStaticParams() { return [...GUIDE_REGISTRY, ...DELIVERY_GUIDE_REGISTRY].map((guide) => ({ slug: guide.slug })); }
 
 export async function generateMetadata({ params }: GuidePageProps): Promise<Metadata> {
-  const guide = getGuide((await params).slug);
+  const slug = (await params).slug;
+  const deliveryGuide = getDeliveryGuide(slug);
+  if (deliveryGuide) return { title: { absolute: deliveryGuide.title }, description: deliveryGuide.description, alternates: { canonical: `${BASE}/guides/${deliveryGuide.slug}` }, robots: { index: true, follow: true }, openGraph: { title: deliveryGuide.title, description: deliveryGuide.description, url: `${BASE}/guides/${deliveryGuide.slug}`, type: "website" } };
+  const guide = getGuide(slug);
   if (!guide) return {};
   const description = stripMarkdown(guide.description);
   return {
@@ -35,7 +40,10 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
 const relatedEntries = (guide: GuideEntry) => guide.relatedSlugs.map(getGuide).filter((entry): entry is GuideEntry => Boolean(entry));
 
 export default async function GuidePage({ params }: GuidePageProps) {
-  const guide = getGuide((await params).slug);
+  const slug = (await params).slug;
+  const deliveryGuide = getDeliveryGuide(slug);
+  if (deliveryGuide) return <DeliveryGuidePage guide={deliveryGuide} />;
+  const guide = getGuide(slug);
   if (!guide) notFound();
   const menu = await getMenu();
   const product = resolveGuideProduct(guide, menu.products);
