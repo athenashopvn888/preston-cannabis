@@ -411,62 +411,6 @@
     "schemaType": "FAQPage"
   },
   {
-    "path": "/delivery",
-    "title": "Delivery Information | Preston Cannabis",
-    "metaDescription": "Delivery details for Preston Cannabis are not currently published or confirmed. Near-me searches do not establish delivery service.",
-    "h1": "Delivery Information for Preston Cannabis",
-    "eyebrow": "Service Information Status",
-    "intro": "Delivery details for Preston Cannabis are not currently published or confirmed on this page. This page is intentionally limited to that status and does not represent a delivery-service offer or promise.",
-    "sections": [
-      {
-        "heading": "What this page confirms",
-        "body": "This page does not publish or confirm delivery service details for Preston Cannabis at 268 Preston St, Ottawa, ON K1R 7R6. No delivery availability, area, timing or other delivery terms should be inferred from this page."
-      },
-      {
-        "heading": "Near-me delivery searches are not service confirmation",
-        "body": "Searches such as delivery near me, weed delivery near me or similar near-me phrases do not establish that Preston Cannabis provides delivery. Search visibility and search wording are not evidence of a location-specific delivery service."
-      },
-      {
-        "heading": "Where to check published information",
-        "body": "For information currently published by Preston Cannabis, use prestoncannabis.com or the contact details for 268 Preston St, Ottawa, ON K1R 7R6 and 343-804-9020. Contacting the location does not itself guarantee that delivery information or a delivery service will be available."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Preston Cannabis currently confirm delivery on this page?",
-        "answer": "No. Delivery details are not currently published or confirmed on this page."
-      },
-      {
-        "question": "Does appearing for a delivery near me search mean Preston Cannabis offers delivery?",
-        "answer": "No. A near-me delivery search does not establish that this location provides delivery."
-      },
-      {
-        "question": "Where should I look for published Preston Cannabis information?",
-        "answer": "Use prestoncannabis.com or the published contact details for Preston Cannabis at 268 Preston St, Ottawa, ON K1R 7R6 and 343-804-9020."
-      }
-    ],
-    "cta": {
-      "label": "View Contact Information",
-      "href": "/contact"
-    },
-    "internalLinks": [
-      {
-        "label": "Contact Preston Cannabis",
-        "href": "/contact"
-      },
-      {
-        "label": "Frequently Asked Questions",
-        "href": "/faq"
-      },
-      {
-        "label": "Preston Cannabis Resources",
-        "href": "/resources"
-      }
-    ],
-    "useSpatialCoverage": false,
-    "schemaType": "WebPage"
-  },
-  {
     "path": "/resources",
     "title": "Preston Cannabis Resources | Ottawa",
     "metaDescription": "Explore Preston Cannabis guides covering first visits, Gatineau and Hull trip planning, and near-me dispensary search topics.",
