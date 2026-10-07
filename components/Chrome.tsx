@@ -41,7 +41,6 @@ export function Footer() {
         <Link href="/faq">Questions & answers</Link>
         <Link href="/resources">Resources</Link>
         <Link href="/guides">Guides</Link>
-        <Link href="/delivery">Delivery information</Link>
       </nav>
     </div>
     <div className="footer-base">
