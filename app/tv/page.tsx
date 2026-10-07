@@ -6,6 +6,7 @@ import { getFlowerEffects } from "./flowerEffects";
 import { TOP_TIER_BUNDLE_LABELS } from "./bundleLabels";
 import HiringRibbon from "../components/HiringRibbon";
 import TvStoreHeader from "../components/TvStoreHeader";
+import TvReviewQr from "../TvReviewQr";
 import { tierPerGramLabel } from "../lib/tierBadgePrice";
 import { tvHiring } from "../lib/tvHiring";
 import { formatBoardTime, readStockUpdatedAt } from "../lib/tvStockTime";
@@ -671,6 +672,7 @@ function AddOnsCard({ items, hiIdx }: { items: Item[]; hiIdx: number }) {
             </div>
           ))}
         </div>
+        <TvReviewQr storeName="Preston Cannabis" />
       </div>
     </div>
   );
