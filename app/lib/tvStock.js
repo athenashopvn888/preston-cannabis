@@ -18,6 +18,7 @@ const DEFAULT_APPS_SCRIPT_URL =
 
 const TV_STORE = "TPC01";
 const TV_STOCK_CACHE_MS = 300 * 1000;
+const TV_STOCK_FAILURE_CACHE_MS = 60 * 1000;
 const TV_STOCK_FETCH_TIMEOUT_MS = 25000;
 const PARTIAL_STOCK_RATIO = 0.5;
 const ALLOWED_HOSTS = new Set(["script.google.com", "script.googleusercontent.com"]);
@@ -196,8 +197,10 @@ function selectTvPayload(dataset, type) {
       "x-tv-data-store": TV_STORE,
       "x-tv-data-flower-count": String(dataset.flowers.length),
       "x-tv-data-item-count": String(dataset.items.length),
+      ...(dataset.fallbackReason ? { "x-tv-data-fallback-reason": dataset.fallbackReason } : {}),
       "Cache-Control": "no-store",
     },
+    status: dataset.status || 200,
   };
 }
 
@@ -207,7 +210,7 @@ async function fetchJson(fetchImpl, url, timeoutMs) {
     try {
       const res = await fetchImpl(url, {
         signal: AbortSignal.timeout(timeoutMs),
-        next: { revalidate: 300 },
+        cache: "no-store",
       });
       if (!res || !res.ok) {
         const status = res ? res.status : "no response";
@@ -232,11 +235,17 @@ async function resolveDataset(options) {
   const timeoutMs = options.timeoutMs ?? TV_STOCK_FETCH_TIMEOUT_MS;
   const baseUrl = resolveAppsScriptUrl(options.appsScriptUrl);
   const now = options.now ?? Date.now();
-  const fallback = () => (lastGood ? { ...lastGood, source: "last-known-good" } : staticDataset(options.staticFlowers, options.staticItems));
+  const fail = (reason) => {
+    const dataset = lastGood
+      ? { ...lastGood, source: "last-good", fallbackReason: reason }
+      : { ...staticDataset(options.staticFlowers, options.staticItems), fallbackReason: reason, status: 503 };
+    cached = { expiresAt: now + TV_STOCK_FAILURE_CACHE_MS, dataset };
+    return dataset;
+  };
 
   if (!baseUrl) {
     console.warn("[tv-data] Apps Script URL unavailable; serving fallback");
-    return fallback();
+    return fail("Apps Script URL unavailable");
   }
 
   let catalog;
@@ -244,13 +253,13 @@ async function resolveDataset(options) {
     catalog = await fetchJson(fetchImpl, sheetUrl(baseUrl, false), timeoutMs);
   } catch (err) {
     console.warn(`[tv-data] Catalog fetch failed (${err.message}); serving fallback`);
-    return fallback();
+    return fail(err.message || "catalog fetch failed");
   }
 
   const catalogReason = rejectCatalog(catalog);
   if (catalogReason) {
     console.warn(`[tv-data] Catalog rejected (${catalogReason}); serving fallback`);
-    return fallback();
+    return fail(`catalog rejected: ${catalogReason}`);
   }
 
   let onHand = null;
@@ -258,7 +267,7 @@ async function resolveDataset(options) {
     onHand = parseOnHand(await fetchJson(fetchImpl, sheetUrl(baseUrl, true), timeoutMs));
   } catch (err) {
     console.warn(`[tv-data] ONHAND fetch failed (${err.message})`);
-    onHand = null;
+    return fail(err.message || "ONHAND fetch failed");
   }
 
   let flowers = catalog.flowers;
@@ -270,21 +279,21 @@ async function resolveDataset(options) {
     const filtered = applyOnHand(flowers, items, onHand);
     if (filtered.flowers.length === 0 || filtered.items.length === 0) {
       console.warn("[tv-data] ONHAND intersection empty; serving fallback");
-      return fallback();
+      return fail("ONHAND intersection empty");
     }
     flowers = filtered.flowers;
     items = filtered.items;
     source = "live";
     if (onHand.stockDate) stockDate = onHand.stockDate;
-  } else if (lastGood) {
+  } else {
     console.warn("[tv-data] ONHAND unavailable; serving last-known-good snapshot");
-    return { ...lastGood, source: "last-known-good" };
+    return fail("ONHAND data unavailable");
   }
 
   const partial = tooPartial(flowers, items, options.staticFlowers, options.staticItems);
   if (partial) {
     console.warn(`[tv-data] Live stock rejected (${partial}); serving fallback`);
-    return fallback();
+    return fail(`live stock rejected: ${partial}`);
   }
 
   postprocessFlowers(flowers);

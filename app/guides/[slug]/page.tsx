@@ -15,6 +15,7 @@ const laneCopy = {
   thc_vape: { label: "THC Vape", category: "THC Vape" },
 } as const;
 
+export const dynamic = "force-dynamic";
 export const dynamicParams = false;
 export function generateStaticParams() { return GUIDE_REGISTRY.map((guide) => ({ slug: guide.slug })); }
 
