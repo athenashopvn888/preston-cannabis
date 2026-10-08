@@ -121,7 +121,7 @@ test("live catalog intersected with ONHAND is cached and reports TPC01 headers",
   assert.equal(calls.length, 2);
   assert.equal(calls[0].url, `${DEFAULT_APPS_SCRIPT_URL}?store=TPC01`);
   assert.equal(calls[1].url, `${DEFAULT_APPS_SCRIPT_URL}?store=TPC01&stock=1`);
-  assert.equal(calls[0].opts.next.revalidate, 300);
+  assert.equal(calls[0].opts.cache, "no-store");
   assert.equal(flowerRes.headers["x-tv-data-source"], "live");
   assert.equal(flowerRes.headers["x-tv-data-as-of"], "2026-09-27T16:15:30.000Z");
   assert.equal(flowerRes.headers["x-tv-data-store"], TV_STORE);
@@ -172,11 +172,59 @@ test("a failed refresh keeps the last-known-good snapshot", async () => {
     appsScriptUrl: "https://script.google.com/macros/s/test/exec",
     now: 5_000 + 301_000,
   });
-  assert.equal(failed.headers["x-tv-data-source"], "last-known-good");
+  assert.equal(failed.headers["x-tv-data-source"], "last-good");
+  assert.equal(failed.headers["x-tv-data-fallback-reason"], "network down");
   assert.equal(failed.headers["x-tv-data-as-of"], "2026-09-27T16:15:30.000Z");
   assert.equal(failed.body.length, 6);
   assert.equal(failed.body[0].name, "LIVE ITEM 0");
   assert.notEqual(failed.body, staticItems);
+});
+
+test("HTTP 200 HTML, HTTP 429, and thrown fetches serve last-good with a reason and cool down for 60 seconds", async () => {
+  const flowers = list(6, (index) => flower(`LIVE ${index}`, { sku: String(index + 1) }));
+  const items = list(6, (index) => item(`LIVE ITEM ${index}`, "$9", { sku: String(50 + index) }));
+  const good = mockFetch(
+    { storeCode: "TPC01", stockDate: "2026-09-27T16:15:30.000Z", flowers, items },
+    stockMap(flowers.concat(items)),
+  );
+
+  for (const scenario of [
+    {
+      name: "HTML error body",
+      fetchImpl: async () => ({ ok: true, status: 200, async json() { throw new SyntaxError("Unexpected token '<'"); } }),
+      reason: "Unexpected token '<'",
+    },
+    {
+      name: "429 rate limit",
+      ...mockFetch(null, null, { catalogStatus: 429 }),
+      reason: "HTTP 429",
+    },
+    {
+      name: "thrown network error",
+      ...mockFetch(null, null, { throwCatalog: new Error("socket reset") }),
+      reason: "socket reset",
+    },
+  ]) {
+    resetTvStockCache();
+    await getTvData({ type: "flowers", staticFlowers, staticItems, fetchImpl: good.fetchImpl, appsScriptUrl: "https://script.google.com/macros/s/test/exec", now: 1_000 });
+    const failed = await getTvData({ type: "flowers", staticFlowers, staticItems, fetchImpl: scenario.fetchImpl, appsScriptUrl: "https://script.google.com/macros/s/test/exec", now: 302_000 });
+    assert.equal(failed.status, 200, scenario.name);
+    assert.equal(failed.headers["x-tv-data-source"], "last-good", scenario.name);
+    assert.equal(failed.headers["x-tv-data-as-of"], "2026-09-27T16:15:30.000Z", scenario.name);
+    assert.equal(failed.headers["x-tv-data-fallback-reason"], scenario.reason, scenario.name);
+    let callsDuringCooldown = 0;
+    const retry = await getTvData({
+      type: "items",
+      staticFlowers,
+      staticItems,
+      fetchImpl: async () => { callsDuringCooldown += 1; throw new Error("must not refetch during cooldown"); },
+      appsScriptUrl: "https://script.google.com/macros/s/test/exec",
+      now: 361_000,
+    });
+    assert.equal(callsDuringCooldown, 0, scenario.name);
+    assert.equal(retry.headers["x-tv-data-source"], "last-good", scenario.name);
+    assert.equal(retry.headers["x-tv-data-fallback-reason"], scenario.reason, scenario.name);
+  }
 });
 
 test("fetch failure with no snapshot returns the static product data", async () => {
@@ -188,10 +236,13 @@ test("fetch failure with no snapshot returns the static product data", async () 
     appsScriptUrl: "https://script.google.com/macros/s/test/exec",
   });
   assert.equal(result.headers["x-tv-data-source"], "static-fallback");
+  assert.equal(result.status, 503);
+  assert.equal(result.headers["x-tv-data-fallback-reason"], "network down");
   assert.equal(result.headers["x-tv-data-as-of"], "");
   assert.equal(result.headers["x-tv-data-store"], "TPC01");
   assert.equal(result.body, staticFlowers);
 
+  resetTvStockCache();
   const emptyStatic = await getTvData({
     type: "items",
     staticFlowers: [],
@@ -200,6 +251,7 @@ test("fetch failure with no snapshot returns the static product data", async () 
     appsScriptUrl: "https://script.google.com/macros/s/test/exec",
   });
   assert.equal(emptyStatic.headers["x-tv-data-source"], "static-fallback");
+  assert.equal(emptyStatic.status, 503);
   assert.deepEqual(emptyStatic.body, []);
 });
 

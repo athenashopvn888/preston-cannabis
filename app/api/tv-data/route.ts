@@ -10,13 +10,14 @@ export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
   const type = new URL(request.url).searchParams.get("type") || "flowers";
-  const { body, headers } = await getTvData({
+  const { body, headers, status = 200 } = await getTvData({
     type,
     staticFlowers: [],
     staticItems: [],
   });
 
   return NextResponse.json(body, {
+    status,
     headers: { ...headers, "X-Robots-Tag": "noindex" },
   });
 }

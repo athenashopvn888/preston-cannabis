@@ -208,6 +208,7 @@ export default function TV2Page() {
   const loadData = useCallback(async () => {
     try {
       const res = await fetch("/api/tv-data?type=items");
+      if (res.status === 503) return;
       const data: Item[] = res.ok ? await res.json() : [];
       setItems(data);
       setStockUpdated(readStockUpdatedAt(res, data));

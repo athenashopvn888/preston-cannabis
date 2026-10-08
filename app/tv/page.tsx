@@ -709,6 +709,7 @@ export default function TVMenuPage() {
         fetch("/api/tv-data?type=flowers"),
         fetch("/api/tv-data?type=items"),
       ]);
+      if (fRes.status === 503 || iRes.status === 503) return;
       const fData: Flower[] = fRes.ok ? await fRes.json() : [];
       const iData: Item[] = iRes.ok ? await iRes.json() : [];
       setStockUpdated(readStockUpdatedAt(fRes, fData) || readStockUpdatedAt(iRes, iData));
