@@ -12,6 +12,7 @@ import { tierSeoTitle, tierH1 } from "@/lib/tiers.mjs";
 import { jsonLd, tierCollectionGraph } from "@/lib/landing-schema.mjs";
 import { getTierGuideLinks } from "@/lib/guideRegistry";
 import guideStyles from "../guides/[slug]/guide.module.css";
+import { storeTierRange, tierRangeText } from "@/lib/tierPriceRanges";
 
 export const dynamic = "force-dynamic";
 type Props = { params: Promise<{ tier: string }> };
@@ -31,6 +32,7 @@ export default async function TierPage({ params }: Props) {
   const copy = TIER_COPY[tier];
   const menu = await getMenu();
   const products = menu.products.filter((product) => product.category === "flower" && product.tier === t.inventoryTier);
+  const tierRange = storeTierRange(menu.products, t.inventoryTier);
   const h1 = tierH1(t.name);
   const schema = tierCollectionGraph(SITE, {
     path: `/${tier}`,
@@ -49,6 +51,8 @@ export default async function TierPage({ params }: Props) {
         <span className="eyebrow">PRESTON STREET FLOWER</span>
         <h1>{h1}</h1>
         <p>{copy.intro}</p>
+        {tierRangeText(tierRange) && <p className="tier-live-range"><small className="price-scope-label">In-store price</small>{tierRangeText(tierRange)}</p>}
+        <p className="price-rule-notice"><strong>IN-STORE PRICES ONLY.</strong><br/>Delivery coming soon.</p>
       </div>
       <EditorialArtwork asset={ARTWORK.tiers[t.slug]} className="tier-introduction-art"/>
     </div>
