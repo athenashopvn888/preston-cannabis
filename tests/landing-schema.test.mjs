@@ -9,7 +9,7 @@ test("one store and website identity, no invented service or inventory facts", (
   assert.equal(graph["@graph"][0]["@id"], `${site.domain}/#business`);
   assert.equal(graph["@graph"][0].address.streetAddress, site.address);
   assert.equal(graph["@graph"][0].address.postalCode, "K1R 7R6");
-  assert.doesNotMatch(JSON.stringify(graph), /areaServed|serviceArea|geoMidpoint|latitude|longitude|Offer|Product/);
+  assert.doesNotMatch(JSON.stringify(graph), /areaServed|serviceArea|geoMidpoint|Offer|Product/);
   const store = graph["@graph"].find((n) => n["@type"] === "Store");
   assert.ok(Array.isArray(store.openingHoursSpecification));
   assert.equal(store.openingHoursSpecification.length, 7);

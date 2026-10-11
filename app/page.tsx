@@ -11,6 +11,7 @@ import { CORRIDOR_NEIGHBOURHOODS, HOME_FAQS, HOME_HUB_CARDS, HOURS_STATUS } from
 
 const homeMetadata = meta(HOME_COPY.title, HOME_COPY.description);
 export const metadata = { ...homeMetadata, title: { absolute: HOME_COPY.title }, openGraph: { ...homeMetadata.openGraph, title: HOME_COPY.title } };
+export const dynamic = "force-dynamic";
 
 export default function Home() {
   return <main id="main">

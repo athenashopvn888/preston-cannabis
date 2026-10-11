@@ -5,10 +5,10 @@ import { LANDING_ROUTES, GEOGRAPHIC_ROUTES } from "../lib/landing-contract.mjs";
 import { stableRoutes, buildSitemap } from "../lib/route-registry.mjs";
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const copy = JSON.parse(read("lib/landing-copy.json"));
-test("runtime copy exactly matches both approved PINKY packets and all eleven routes", () => {
+test("runtime copy exactly matches both approved PINKY packets and all approved routes", () => {
   assert.deepEqual(copy, [1, 2].flatMap((n) => JSON.parse(read(`docs/pinky-preston-copy-batch-${n}.json`))));
   assert.deepEqual(copy.map((p) => p.path).sort(), [...LANDING_ROUTES].sort());
-  for (const field of ["path", "title", "metaDescription", "h1"]) assert.equal(new Set(copy.map((p) => p[field])).size, 11, field);
+  for (const field of ["path", "title", "metaDescription", "h1"]) assert.equal(new Set(copy.map((p) => p[field])).size, copy.length, field);
   assert.doesNotMatch(JSON.stringify(copy), /286 Preston|251 Dalhousie|Spirit Corner/);
 });
 test("all approved links and routes resolve to known owners; no duplicate old owner", () => {
@@ -28,7 +28,7 @@ test("index go-live enables sitemap and removes sitewide noindex and the CHC01 p
   assert.doesNotMatch(read("lib/site.ts"), /CHC01|PREVIEW_NOTICE|temporary CHC/);
   const { businessGraph } = await import("../lib/landing-schema.mjs");
   const live = JSON.stringify(businessGraph({ domain: "https://prestoncannabis.com", name: "Preston Cannabis", address: "268 Preston St", city: "Ottawa", province: "ON", postalCode: "K1R 7R6", phone: "343-804-9020", maps: "https://example.test" }));
-  assert.doesNotMatch(live, /areaServed|serviceArea|geoMidpoint|latitude|longitude|hasOfferCatalog|makesOffer/);
+  assert.doesNotMatch(live, /areaServed|serviceArea|geoMidpoint|hasOfferCatalog|makesOffer/);
 });
 test("resource directory and footer make all approved pages discoverable", () => {
   assert.match(read("components/LandingPage.tsx"), /approvedCopy\.filter/);

@@ -368,6 +368,10 @@
       }
     ],
     "faqs": [
+        {
+          "question": "Can I get the store price on a delivery order?",
+          "answer": "Delivery is coming soon. In-store prices are for purchases made in the store, and delivery orders will have their own prices."
+        },
       {
         "question": "Where is Preston Cannabis?",
         "answer": "Preston Cannabis is listed at 268 Preston St, Ottawa, ON K1R 7R6."
