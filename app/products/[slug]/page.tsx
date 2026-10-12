@@ -38,7 +38,7 @@ export default async function ProductPage({ params }: Props) {
           {p.thc && <><dt>Source-listed THC</dt><dd>{p.thc}</dd></>}
           {p.mg && <><dt>Source-listed amount</dt><dd>{p.mg}</dd></>}
         </dl>
-        {p.category === "flower" ? <FlowerPrices prices={p.prices}/> : <ul className="price-list">{p.prices.map((price) => <li key={price.label}><span>{price.label}</span><span>{price.sale && <><span className="sr-only">Regular price </span><del>{currency(price.regular)}</del> </>}{currency(price.amount)}</span></li>)}</ul>}
+        {p.category === "flower" ? <FlowerPrices prices={p.prices} tier={p.tier}/> : <ul className="price-list">{p.prices.map((price) => <li key={price.label}><span>{price.label}</span><span>{price.sale && <><span className="sr-only">Regular price </span><del>{currency(price.regular)}</del> </>}{currency(price.amount)}</span></li>)}</ul>}
         <div className="button-row" style={{ marginTop: 25 }}><a className="button" href={SITE.tel}>Ask about Preston ↗</a><Link className="text-link" href={c ? `/menu/${c.slug}` : "/menu"}>Back to collection →</Link></div>
       </div>
     </div>

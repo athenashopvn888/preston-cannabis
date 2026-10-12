@@ -2,7 +2,8 @@
  * Free-gram promo (After Dark parity, Grok 2026-10-12).
  * Wording: "Buy 2g Get 1g FREE" / "Buy 3g Get 3g FREE". Every number comes from the
  * strain's own live-feed pack price; nothing is invented. Top tiers only (Exotic, Premium, AAA+).
- * show6g=false on stores that label the second pack as 5g: the 6g offer is then never shown.
+ * Top-3 tiers: the second pack is always 6g fleet-wide (feed field price5g), even where it is labelled 5g.
+ * Only the AA tier is a true 5g, and AA never renders this promo.
  */
 const TOP_TIERS = new Set(["EXOTIC", "PREMIUM", "AAA+"]);
 export const BOGO_BUY_2_GET_1 = "Buy 2g Get 1g FREE";
@@ -40,7 +41,13 @@ export function FreeGramCardLine({ name, tier, price3g, price6g, show6g }: {
       <span className="fg-rates"><s>{dollars(price3g.regular / 2)}/g</s> <strong>{dollars(Math.round((price3g.amount / 3) * 100) / 100)}/g</strong></span>
       <span className="fg-label">{BOGO_BUY_2_GET_1}</span>
       <span className="fg-pay">Pay {dollars(price3g.amount)} = 3g</span>
-      {show6g && price6g && price6g.amount > 0 ? <span className="fg-hint">6g → {perGram(price6g.amount, 6)}</span> : null}
+      {show6g && price6g && price6g.amount > 0 ? (
+        <>
+          <span className="fg-label fg-label6">{BOGO_BUY_3_GET_3}</span>
+          <span className="fg-pay">Pay {dollars(price6g.amount)} = 6g</span>
+          <span className="fg-hint">6g → {perGram(price6g.amount, 6)}</span>
+        </>
+      ) : null}
     </div>
   );
 }

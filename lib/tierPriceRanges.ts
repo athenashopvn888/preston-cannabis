@@ -25,7 +25,9 @@ export function storeTierRange(products: FlowerProduct[], tier: string): TierRan
   const thc: number[] = [];
   for (const product of matches) {
     for (const price of product.prices || []) {
-      const grams = Number(String(price.label ?? "").match(/^(\d+(?:\.\d+)?)g$/i)?.[1]);
+      const labelGrams = Number(String(price.label ?? "").match(/^(\d+(?:\.\d+)?)g$/i)?.[1]);
+      // Top-3 tiers (Exotic, Premium, AAA+): the "5g" feed pack is 6g. AA stays a true 5g.
+      const grams = labelGrams === 5 && ["EXOTIC", "PREMIUM", "AAA+"].includes(tier.toUpperCase()) ? 6 : labelGrams;
       const amount = positiveNumber(price.amount);
       if (Number.isFinite(grams) && grams > 0 && amount !== null) perGram.push(amount / grams);
     }
