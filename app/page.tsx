@@ -15,6 +15,14 @@ export const dynamic = "force-dynamic";
 
 export default function Home() {
   return <main id="main">
+    <Link href="/menu/cigarettes" data-cig-mix-banner="" aria-label="Shop the 2 packs for $5 mix and match cigarette offer" style={{ display: "block", width: "100%" }}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/banners/2pack5cig.webp"
+        alt="2 packs for $5 mix and match and $25 carton cigarette offer at Preston Cannabis."
+        style={{ display: "block", width: "100%", height: "auto" }}
+      />
+    </Link>
     <Link href="/items/cigarettes" data-belmont-mix-match-banner="" aria-label="BELMONT KING SIZE $10 - 2PACK BB $5 MIX & MATCH">
       <span data-belmont-offer-lead="">BELMONT KING SIZE $10 -</span>
       <span data-belmont-offer-tail=""> 2PACK BB $5 MIX &amp; MATCH</span>
