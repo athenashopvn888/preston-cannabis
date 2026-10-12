@@ -13,6 +13,7 @@ import { jsonLd, tierCollectionGraph } from "@/lib/landing-schema.mjs";
 import { getTierGuideLinks } from "@/lib/guideRegistry";
 import guideStyles from "../guides/[slug]/guide.module.css";
 import { storeTierRange, tierRangeText } from "@/lib/tierPriceRanges";
+import { FreeGramTierHeader } from "@/components/FreeGramPromo";
 
 export const dynamic = "force-dynamic";
 type Props = { params: Promise<{ tier: string }> };
@@ -53,6 +54,7 @@ export default async function TierPage({ params }: Props) {
         <p>{copy.intro}</p>
         {tierRangeText(tierRange) && <p className="tier-live-range"><small className="price-scope-label">In-store price</small>{tierRangeText(tierRange)}</p>}
         <p className="price-rule-notice"><strong>IN-STORE PRICES ONLY.</strong><br/>Delivery coming soon.</p>
+        <FreeGramTierHeader tier={t.inventoryTier} prices3g={products.flatMap((p) => p.prices.filter((v) => v.label === "3g").map((v) => v.regular))} prices6g={products.flatMap((p) => p.prices.filter((v) => v.label === "5g").map((v) => v.regular))} show6g/>
       </div>
       <EditorialArtwork asset={ARTWORK.tiers[t.slug]} className="tier-introduction-art"/>
     </div>
