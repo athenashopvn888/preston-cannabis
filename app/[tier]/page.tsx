@@ -14,7 +14,6 @@ import { getTierGuideLinks } from "@/lib/guideRegistry";
 import guideStyles from "../guides/[slug]/guide.module.css";
 import { storeTierRange, tierRangeText } from "@/lib/tierPriceRanges";
 import { FreeGramTierHeader } from "@/components/FreeGramPromo";
-import CategoryCoreBanners from "../components/CategoryCoreBanners";
 
 export const dynamic = "force-dynamic";
 type Props = { params: Promise<{ tier: string }> };
@@ -47,7 +46,6 @@ export default async function TierPage({ params }: Props) {
   const guideLinks = getTierGuideLinks(`/${tier}`);
   return <main id="main" className="page-wrap">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}/>
-    {["exotic", "premium", "aaa"].includes(tier) && <CategoryCoreBanners kind="weed" storeName="Preston Cannabis" weedHref="/exotic" vapeHref="/menu/nicotine-vapes" cigaretteHref="/menu/cigarettes" />}
     <Breadcrumbs items={items}/><StructuredData items={items}/>
     <div className="tier-introduction">
       <div className="page-heading">
