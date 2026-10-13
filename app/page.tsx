@@ -16,7 +16,7 @@ export const dynamic = "force-dynamic";
 
 export default function Home() {
   return <main id="main">
-    <FourCoreBannerStack title="Cannabis on Preston Street" storeName="Preston Cannabis" storeArea="Little Italy, Ottawa" storeOrigin="https://prestoncannabis.com" weedHref="/exotic" vapeHref="/menu/nicotine-vapes" cigaretteHref="/menu/cigarettes" />
+    <FourCoreBannerStack title="Preston Cannabis Dispensary - Cannabis on Preston Street, Little Italy" storeName="Preston Cannabis" storeArea="Little Italy, Ottawa" storeOrigin="https://prestoncannabis.com" weedHref="/exotic" vapeHref="/menu/nicotine-vapes" cigaretteHref="/menu/cigarettes" />
 <section className={`hero ${ARTWORK.hero ? "hero-photographic" : ""}`}>
       {ARTWORK.hero && <EditorialArtwork asset={ARTWORK.hero} className="hero-background" priority/>}
       <div className="hero-lines" aria-hidden="true"/>

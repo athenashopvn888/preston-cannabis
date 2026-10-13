@@ -39,7 +39,7 @@ export default function FourCoreBannerStack({
     { name: `${storeName} nicotine and THC vapes`, description: `Nicotine vapes and THC vapes at ${storeName} in ${storeArea}.`, contentUrl: `${storeOrigin}${VAPE_IMAGE}` },
     { name: `${storeName} cigarette mix and match`, description: `Two packs for $5 mix and match and $25 carton cigarette offer at ${storeName} in ${storeArea}.`, contentUrl: `${storeOrigin}${CIGARETTE_IMAGE}` },
     { name: `${storeName} premium cigarette offer`, description: `BB Full Flavor and Lights plus Marlboro and Belmont cigarette offer at ${storeName} in ${storeArea}.`, contentUrl: `${storeOrigin}${PREMIUM_CIGARETTE_IMAGE}` },
-  ].map((image) => ({ "@type": "ImageObject", ...image }));
+  ].map((image) => ({ "@type": "ImageObject", ...image, caption: image.description }));
 
   useEffect(() => {
     const announcement = announcementRef.current;
