@@ -8,7 +8,6 @@ import { ARTWORK } from "@/lib/artwork";
 import { meta, SITE } from "@/lib/site";
 import { HOME_COPY } from "@/lib/editorial";
 import { CORRIDOR_NEIGHBOURHOODS, HOME_FAQS, HOME_HUB_CARDS, HOURS_STATUS } from "@/lib/content-hub.mjs";
-import FourCoreBannerStack from "./components/FourCoreBannerStack";
 
 const homeMetadata = meta(HOME_COPY.title, HOME_COPY.description);
 export const metadata = { ...homeMetadata, title: { absolute: HOME_COPY.title }, openGraph: { ...homeMetadata.openGraph, title: HOME_COPY.title } };
@@ -16,13 +15,20 @@ export const dynamic = "force-dynamic";
 
 export default function Home() {
   return <main id="main">
-    <FourCoreBannerStack title="Cannabis on Preston Street" storeName="Preston Cannabis" storeArea="Little Italy, Ottawa" storeOrigin="https://prestoncannabis.com" weedHref="/exotic" vapeHref="/menu/nicotine-vapes" cigaretteHref="/menu/cigarettes" />
+    <Link href="/menu/cigarettes" data-cig-mix-banner="" aria-label="Shop the 2 packs for $5 mix and match cigarette offer" style={{ display: "block", width: "100%" }}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/banners/2pack5cig.webp"
+        alt="2 packs for $5 mix and match and $25 carton cigarette offer at Preston Cannabis."
+        style={{ display: "block", width: "100%", height: "auto" }}
+      />
+    </Link>
 <section className={`hero ${ARTWORK.hero ? "hero-photographic" : ""}`}>
       {ARTWORK.hero && <EditorialArtwork asset={ARTWORK.hero} className="hero-background" priority/>}
       <div className="hero-lines" aria-hidden="true"/>
       <div className="hero-content">
         <span className="eyebrow light"><span/>PRESTON STREET · LITTLE ITALY</span>
-        <div className="hero-home-title">Cannabis on <em>Preston Street</em></div>
+        <h1>Cannabis on <em>Preston Street</em></h1>
         <p className="hero-subline">{HOME_COPY.subline}</p>
         <p className="hero-intro">{HOME_COPY.support}</p>
         <div className="button-row">
