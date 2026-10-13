@@ -54,3 +54,4 @@
 .fg-header .fg-deal-price{font-size:15px;color:#1B4332}
 .fg-header .fg-deal-price strong{font-size:20px}
 .fg-header .fg-deal-meta{margin-top:4px;font-size:12px;font-weight:700;color:#5d705d}
+.hero-home-title{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(52px,6.2vw,87px);margin-bottom:25px;letter-spacing:-.055em;line-height:1.06}.hero-home-title em{display:block;color:#c9e9a0;font-weight:400}@media(max-width:1000px){.hero-home-title{font-size:61px}}@media(max-width:650px){.hero-home-title{font-size:59px;margin-bottom:20px}}@media(max-width:375px){.hero-home-title{font-size:52px}}
