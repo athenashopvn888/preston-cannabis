@@ -24,7 +24,7 @@ export default function VisitPage() {
         <p>{HOURS_STATUS.detail}</p>
         <div className="button-row">
           <a className="button" href={SITE.maps} target="_blank" rel="noopener noreferrer">Google Maps</a>
-          <Link className="button secondary" href="/hours">Hours guidance</Link>
+          <Link className="button secondary" href="/hours">Store hours</Link>
         </div>
       </div>
       <div className="info-card">
