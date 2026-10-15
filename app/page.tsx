@@ -7,7 +7,7 @@ import EditorialArtwork from "@/components/EditorialArtwork";
 import { ARTWORK } from "@/lib/artwork";
 import { meta, SITE } from "@/lib/site";
 import { HOME_COPY } from "@/lib/editorial";
-import { CORRIDOR_NEIGHBOURHOODS, HOME_FAQS, HOME_HUB_CARDS, HOURS_STATUS } from "@/lib/content-hub.mjs";
+import { CORRIDOR_NEIGHBOURHOODS, CORRIDOR_NOTES, HOME_FAQS, HOME_HUB_CARDS, HOURS_STATUS } from "@/lib/content-hub.mjs";
 import FourCoreBannerStack from "./components/FourCoreBannerStack";
 
 const homeMetadata = meta(HOME_COPY.title, HOME_COPY.description);
@@ -16,7 +16,7 @@ export const dynamic = "force-dynamic";
 
 export default function Home() {
   return <main id="main">
-    <FourCoreBannerStack title="Preston Cannabis Dispensary - Cannabis on Preston Street, Little Italy" storeName="Preston Cannabis" storeArea="Little Italy, Ottawa" storeOrigin="https://prestoncannabis.com" weedHref="/exotic" vapeHref="/menu/nicotine-vapes" cigaretteHref="/menu/cigarettes" />
+    <FourCoreBannerStack title="Preston Cannabis Dispensary on Preston Street, Little Italy" storeName="Preston Cannabis" storeArea="Little Italy, Ottawa" storeOrigin="https://prestoncannabis.com" weedHref="/exotic" vapeHref="/menu/nicotine-vapes" cigaretteHref="/menu/cigarettes" />
 <section className={`hero ${ARTWORK.hero ? "hero-photographic" : ""}`}>
       {ARTWORK.hero && <EditorialArtwork asset={ARTWORK.hero} className="hero-background" priority/>}
       <div className="hero-lines" aria-hidden="true"/>
@@ -48,14 +48,14 @@ export default function Home() {
     <section className="section" aria-label="Corridor neighbourhoods">
       <div className="section-heading">
         <div><span className="eyebrow">PRESTON CORRIDOR</span><h2>Neighbourhoods that<br/><em>reach this door.</em></h2></div>
-        <Link className="text-link" href="/weed-dispensary-near-me">Geo weed owner →</Link>
+        <Link className="text-link" href="/weed-dispensary-near-me">Weed near Preston St →</Link>
       </div>
       <div className="category-grid">
         {CORRIDOR_NEIGHBOURHOODS.map((name, i) => (
           <div className={`category-card category-${i % 6}`} key={name}>
             <span className="category-number">0{i + 1}</span>
             <h3>{name}</h3>
-            <p>Orientation for shoppers already moving along the Preston Street spine.</p>
+            <p>{(CORRIDOR_NOTES as Record<string, string>)[name] ?? "A short trip to 268 Preston St."}</p>
           </div>
         ))}
       </div>
@@ -64,7 +64,7 @@ export default function Home() {
     <section className="section tier-collections" aria-label="Homepage hubs">
       <div className="section-heading">
         <div><span className="eyebrow">START HERE</span><h2>Hubs for tiers,<br/><em>shelves, and visit.</em></h2></div>
-        {!HOURS_STATUS.is24h && <p className="quiet-note" style={{margin:0}}>Late-night hours run past midnight; doors still open at noon — see /hours.</p>}
+        {!HOURS_STATUS.is24h && <p className="quiet-note" style={{margin:0}}>Open at noon every day and late into the night. Check our hours before you head over.</p>}
       </div>
       <div className="tier-card-grid">
         {HOME_HUB_CARDS.map((card, i) => (
@@ -88,11 +88,11 @@ export default function Home() {
       <div className="local-copy">
         <span className="eyebrow">A PLACE ON PRESTON</span>
         <h2>Your next stop.<br/><em>Preston Cannabis.</em></h2>
-        <p>Map the Little Italy pin, confirm timing by phone, then browse flower tiers or the Native cigarettes and nicotine vape shelves.</p>
+        <p>We are at 268 Preston St, between Carling Ave and Somerset St W. Call 343-804-9020 if you want to check something before you come in.</p>
         <address>{SITE.address}<br/>{SITE.city}, {SITE.province} {SITE.postalCode}</address>
         <div className="button-row">
           <a className="button" href={SITE.maps} target="_blank" rel="noopener noreferrer">Get directions →</a>
-          <Link className="text-link" href="/hours">Hours guidance →</Link>
+          <Link className="text-link" href="/hours">Store hours →</Link>
         </div>
       </div>
     </section>

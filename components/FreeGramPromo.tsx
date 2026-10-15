@@ -14,7 +14,7 @@ export function isFreeGramTier(tier: string | null | undefined): boolean {
 }
 function dollars(amount: number): string {
   const cents = Math.round(amount * 100);
-  return cents % 100 === 0 ? `$${cents / 100}` : `$${(cents / 100).toFixed(2)}`;
+  return `$${(cents / 100).toFixed(2)}`;
 }
 function perGram(price: number, grams: number): string {
   const body = `${dollars(Math.round((price / grams) * 100) / 100)}/g`;

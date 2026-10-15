@@ -14,14 +14,14 @@ export function meta(title: string, description: string, path = "/"): Metadata {
     twitter: { card: "summary_large_image", title, description, images: ["/opengraph-image"] } };
 }
 export const CATEGORIES = [
-  { slug: "flower", name: "Flower", mark: "✳", text: "Explore flower by strain and menu tier." },
-  { slug: "pre-rolls", name: "Pre-rolls", mark: "╱", text: "Compare listed pre-roll formats." },
-  { slug: "vape-disposables", name: "THC vapes", mark: "◒", text: "Cannabis vape formats in one collection." },
-  { slug: "edibles", name: "Edibles", mark: "◈", text: "Browse listed edible formats." },
-  { slug: "concentrates", name: "Concentrates", mark: "✦", text: "Explore concentrate formats." },
-  { slug: "accessories", name: "Accessories", mark: "◎", text: "Browse accessories and hardware." },
+  { slug: "flower", name: "Flower", mark: "✳", text: "Every strain, sorted by tier from Exotic to Budget." },
+  { slug: "pre-rolls", name: "Pre-rolls", mark: "╱", text: "Single pre-rolls and multi-packs." },
+  { slug: "vape-disposables", name: "THC vapes", mark: "◒", text: "THC carts and disposables." },
+  { slug: "edibles", name: "Edibles", mark: "◈", text: "Gummies, chocolates and other edibles." },
+  { slug: "concentrates", name: "Concentrates", mark: "✦", text: "Shatter, hash, rosin and other concentrates." },
+  { slug: "accessories", name: "Accessories", mark: "◎", text: "Papers, cones, grinders and lighters." },
   { slug: "nicotine-vapes", name: "Nicotine vapes", mark: "▯", text: "A separate collection for nicotine products." },
-  { slug: "cigarettes", name: "Cigarettes", mark: "≋", text: "Browse listed cigarette formats." },
+  { slug: "cigarettes", name: "Cigarettes", mark: "≋", text: "Native and Canadian cigarettes in packs and cartons." },
 ] as const;
 export { TIERS } from "./tiers.mjs";
 export const FAQS = [

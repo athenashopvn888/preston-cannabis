@@ -34,7 +34,7 @@ export function Footer() {
       <nav aria-label="Footer navigation">
         <Link href="/menu">Menu</Link>
         <Link href="/visit">Visit & directions</Link>
-        <Link href="/hours">Hours guidance</Link>
+        <Link href="/hours">Store hours</Link>
         <Link href="/native-cigarettes">Native cigarettes</Link>
         <Link href="/nicotine-vape">Nicotine vapes</Link>
         <Link href="/contact">Contact</Link>
