@@ -9,7 +9,10 @@ import {
 
 test("TV2 daytime uses America/Toronto regardless of process timezone", () => {
   assert.equal(isTv2Daytime(new Date("2026-10-07T17:35:00.000Z")), true);
-  assert.equal(isTv2Daytime(new Date("2026-10-07T13:59:00.000Z")), false);
+  assert.equal(isTv2Daytime(new Date("2026-10-07T13:59:00.000Z")), true);
+  assert.equal(isTv2Daytime(new Date("2026-10-07T12:00:00.000Z")), true);
+  assert.equal(isTv2Daytime(new Date("2026-10-07T11:59:00.000Z")), false);
+  assert.equal(isTv2Daytime(new Date("2026-10-07T20:59:00.000Z")), true);
   assert.equal(isTv2Daytime(new Date("2026-10-07T21:30:00.000Z")), false);
 });
 

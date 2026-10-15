@@ -1,4 +1,5 @@
 ﻿import Link from "next/link";
+import CigaretteSeasonalNotice from "@/app/components/CigaretteSeasonalNotice";
 import { Breadcrumbs } from "@/components/Chrome";
 import { meta, SITE } from "@/lib/site";
 import { jsonLd, simplePageGraph } from "@/lib/landing-schema.mjs";
@@ -10,6 +11,7 @@ export const metadata = { ...pageMeta, title: { absolute: NATIVE_CIG_COPY.title 
 export default function NativeCigarettesPage() {
   const schema = simplePageGraph(SITE, { path: "/native-cigarettes", title: NATIVE_CIG_COPY.h1, description: NATIVE_CIG_COPY.description, faqs: NATIVE_CIG_COPY.faqs });
   return <main id="main" className="page-wrap">
+    <CigaretteSeasonalNotice sticky />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}/>
     <Breadcrumbs items={[{ name: "Native cigarettes", href: "/native-cigarettes" }]}/>
     <div className="page-heading">
