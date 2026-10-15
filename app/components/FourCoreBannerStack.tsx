@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import CigaretteSeasonalNotice from "./CigaretteSeasonalNotice";
 
 type FourCoreBannerStackProps = {
   title: string;
@@ -49,9 +50,11 @@ export default function FourCoreBannerStack({
     const updateClearance = () => {
       window.cancelAnimationFrame(frame);
       frame = window.requestAnimationFrame(() => {
-        const currentMargin = Number.parseFloat(window.getComputedStyle(announcement).marginTop);
-        const flowTop = announcement.getBoundingClientRect().top - (currentMargin || 0);
-        const nextClearance = Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom - flowTop));
+        // Document coordinates (scroll-safe); only a fixed nav overlaps page flow.
+        const currentMargin = Number.parseFloat(window.getComputedStyle(announcement).marginTop) || 0;
+        const flowTopDoc = announcement.getBoundingClientRect().top + window.scrollY - currentMargin;
+        const navFixed = window.getComputedStyle(nav).position === "fixed";
+        const nextClearance = navFixed ? Math.min(400, Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom - flowTopDoc))) : 0;
         setNavClearance((current) => current === nextClearance ? current : nextClearance);
       });
     };
@@ -70,6 +73,7 @@ export default function FourCoreBannerStack({
     <aside
       ref={announcementRef}
       data-fleet-homepage-announcement=""
+      data-nav-clearance-self=""
       aria-label="Store announcements"
       style={{ display: "flex", flexDirection: "column", width: "100%", maxWidth: "100%", height: "auto", overflowX: "hidden", overflowY: "visible", marginTop: navClearance === null ? undefined : navClearance, position: "relative", zIndex: 50 }}
     >
@@ -79,6 +83,7 @@ export default function FourCoreBannerStack({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": imageObjects }).replace(/</g, "\\u003c") }} />
       <figure data-core-banner="weed" style={figureStyle}><Link href={weedHref} aria-label={`Shop Exotic, Premium and AAA+ weed tiers at ${storeName}`} style={linkStyle}>{/* eslint-disable-next-line @next/next/no-img-element */}<img src={TOP_WEED_IMAGE} alt={`${storeName} in ${storeArea} — Exotic, Premium and AAA+ top weed tiers`} title={`${storeName} top weed tiers — Exotic, Premium and AAA+`} style={imageStyle} /></Link><figcaption style={captionStyle}>Top 3 tiers only (Exotic, Premium, AAA+): Buy 2g Get 1g FREE · Buy 3g Get 3g FREE (6g)</figcaption></figure>
       <figure data-core-banner="vapes" style={figureStyle}><Link href={vapeHref} aria-label={`Shop nicotine and THC vapes at ${storeName}`} style={linkStyle}>{/* eslint-disable-next-line @next/next/no-img-element */}<img src={VAPE_IMAGE} alt={`${storeName} in ${storeArea} — nicotine and THC vapes`} title={`${storeName} nicotine and THC vapes`} style={imageStyle} loading="lazy" /></Link><figcaption style={captionStyle}>Nicotine + THC vapes</figcaption></figure>
+      <CigaretteSeasonalNotice />
       <figure data-core-banner="cigarettes" style={figureStyle}><Link href={cigaretteHref} aria-label={`Shop cigarette mix and match offers at ${storeName}`} style={linkStyle}>{/* eslint-disable-next-line @next/next/no-img-element */}<img src={CIGARETTE_IMAGE} alt={`${storeName} in ${storeArea} — 2 packs for $5 mix and match and $25 carton cigarette offer`} title={`${storeName} cigarette offer — 2 packs $5 mix and match, $25 carton`} style={imageStyle} loading="lazy" /></Link><figcaption style={captionStyle}>2 PACKS $5 / $25 CARTON</figcaption></figure>
       <figure data-core-banner="premium-cigarettes" style={figureStyle}><Link href={cigaretteHref} aria-label={`Shop BB, Marlboro and Belmont cigarette offers at ${storeName}`} style={linkStyle}>{/* eslint-disable-next-line @next/next/no-img-element */}<img src={PREMIUM_CIGARETTE_IMAGE} alt={`${storeName} in ${storeArea} — BB Full Flavor and Lights, Marlboro and Belmont premium cigarettes`} title={`${storeName} premium cigarettes — BB, Marlboro and Belmont`} style={imageStyle} loading="lazy" /></Link><figcaption style={captionStyle}>BB Full Flavor + Lights 2 packs $5 · Marlboro &amp; Belmont $10/pack</figcaption></figure>
     </aside>
