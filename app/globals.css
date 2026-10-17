@@ -58,3 +58,5 @@
 
 /* Sticky cigarette notice strip: paint solid white edge-to-edge (covers page gutters) without changing layout. */
 .page-wrap > [data-cigarette-seasonal-wrap="sticky"]{box-shadow:0 0 0 100vmax var(--bg-primary,#fff);clip-path:inset(0 -100vmax)}
+
+.open24-banner{display:block;width:100%;max-width:100%;box-sizing:border-box;padding:10px 12px;background:var(--lime);color:var(--deep);text-align:center;font-weight:900;font-size:clamp(14px,3.8vw,18px);letter-spacing:.12em;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-bottom:2px solid var(--deep)}.open24-banner:hover{filter:brightness(1.05)}
