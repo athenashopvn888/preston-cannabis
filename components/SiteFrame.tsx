@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { Footer, Header } from "./Chrome";
+import Open24Banner from "./Open24Banner";
 
 function isTvBoard(path: string) {
   return path === "/tv" || path === "/tv2";
@@ -14,6 +15,7 @@ export default function SiteFrame({ children }: { children: React.ReactNode }) {
   return (
     <>
       <a className="skip-link" href="#main">Skip to content</a>
+      <Open24Banner />
       <Header />
       {children}
       <Footer />
