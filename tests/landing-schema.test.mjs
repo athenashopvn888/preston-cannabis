@@ -13,15 +13,16 @@ test("one store and website identity, no invented service or inventory facts", (
   const store = graph["@graph"].find((n) => n["@type"] === "Store");
   assert.ok(Array.isArray(store.openingHoursSpecification));
   assert.equal(store.openingHoursSpecification.length, 7);
-  assert.equal(store.openingHoursSpecification.find((r) => r.dayOfWeek === "Thursday").closes, "04:00");
-  assert.equal(store.openingHoursSpecification.find((r) => r.dayOfWeek === "Sunday").closes, "02:00");
-  assert.equal(store.openingHoursSpecification.find((r) => r.dayOfWeek === "Monday").closes, "01:00");
-  assert.equal(store.openingHours, undefined);
+  for (const row of store.openingHoursSpecification) {
+    assert.equal(row.opens, "00:00", row.dayOfWeek);
+    assert.equal(row.closes, "23:59", row.dayOfWeek);
+  }
+  assert.equal(store.openingHours, "Mo-Su 00:00-23:59");
 });
-test("homepage FAQPage attaches without inventing 24h openingHours string", () => {
+test("homepage FAQPage attaches with the published 24/7 openingHours string", () => {
   const graph = businessGraph(site, [{ question: "Hours?", answer: "See weekly grid." }]);
   assert.ok(graph["@graph"].some((n) => n["@type"] === "FAQPage"));
-  assert.doesNotMatch(JSON.stringify(graph), /Mo-Su 00:00-23:59|openingHours":"/);
+  assert.match(JSON.stringify(graph), /"openingHours":"Mo-Su 00:00-23:59"/);
 });
 test("50000 metre address-based coverage appears only on approved geographic pages", () => {
   for (const path of LANDING_ROUTES) {

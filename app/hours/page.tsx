@@ -29,7 +29,7 @@ export default function HoursPage() {
           </li>
         ))}
       </ul>
-      <p className="quiet-note" style={{marginTop: 12}}>Times are Ottawa local. Closes after midnight stay attached to the day the shift began.</p>
+      <p className="quiet-note" style={{marginTop: 12}}>Times are Ottawa local. Open 24 hours, 7 days a week.</p>
     </div>
 
     {HOURS_COPY.sections.map((section) => (

@@ -28,5 +28,5 @@ export const FAQS = [
   ["Where is Preston Cannabis?", "Preston Cannabis is at 268 Preston St, Ottawa, ON K1R 7R6, in Little Italy between Carling and Somerset West."],
   ["Is this Preston's live inventory?", "Yes. The menu lists Preston Cannabis products, weights, and prices for this store."],
   ["How can I contact the store?", "Call 343-804-9020 for questions about Preston Cannabis."],
-  ["Where can I find store hours?", "Preston Cannabis opens daily at 12 PM. Thursday–Saturday close at 4 AM, Sunday at 2 AM, and Monday–Wednesday at 1 AM (Ottawa local). Call 343-804-9020 for holiday exceptions."],
+  ["Where can I find store hours?", "Preston Cannabis is open 24 hours a day, 7 days a week. Call 343-804-9020 with any questions."],
 ];
