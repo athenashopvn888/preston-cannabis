@@ -22,7 +22,7 @@ test("in-store boards stay out of the sitemap and the public site has no age gat
   assert.doesNotMatch(read("app/layout.tsx"), /<AgeGate/);
 });
 
-test("header uses this store's address and hours and hides the 24-hour alert", () => {
+test("header uses this store's address and hours and shows the 24-hour alert", () => {
   const store = buildTvStore({
     name: "Preston Cannabis",
     streetAddress: "268 Preston St",
@@ -32,9 +32,9 @@ test("header uses this store's address and hours and hides the 24-hour alert", (
   });
   assert.equal(store.name, "Preston Cannabis");
   assert.equal(store.shortAddress, "268 Preston St, Ottawa");
-  assert.equal(store.hours, "Thu–Sat 12 PM–4 AM · Sun 12 PM–2 AM · Mon–Wed 12 PM–1 AM");
-  assert.equal(store.open24Hours7Days, false);
-  assert.equal(HOURS_STATUS.is24h, false);
+  assert.equal(store.hours, "Mon–Sun Open 24 hours");
+  assert.equal(store.open24Hours7Days, true);
+  assert.equal(HOURS_STATUS.is24h, true);
   assert.equal(isOpen24Hours7Days([
     { dayOfWeek: "Monday", opens: "00:00", closes: "23:59" },
     { dayOfWeek: "Tuesday", opens: "00:00", closes: "23:59" },

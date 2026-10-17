@@ -64,7 +64,7 @@ export default function Home() {
     <section className="section tier-collections" aria-label="Homepage hubs">
       <div className="section-heading">
         <div><span className="eyebrow">START HERE</span><h2>Hubs for tiers,<br/><em>shelves, and visit.</em></h2></div>
-        {!HOURS_STATUS.is24h && <p className="quiet-note" style={{margin:0}}>Open at noon every day and late into the night. Check our hours before you head over.</p>}
+        <p className="quiet-note" style={{margin:0}}>Open 24 hours, 7 days a week.</p>
       </div>
       <div className="tier-card-grid">
         {HOME_HUB_CARDS.map((card, i) => (

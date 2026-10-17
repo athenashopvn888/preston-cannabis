@@ -8,21 +8,19 @@ import { tierSeoTitle } from "../lib/tiers.mjs";
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const homeTitle = read("lib/editorial.ts").match(/title:\s*"([^"]+)"/)[1];
 
-test("G3 homepage hubs include visit/cig/vape/geo and omit false 24h", () => {
-  assert.equal(HOURS_STATUS.is24h, false);
+test("G3 homepage hubs include visit/cig/vape/geo and publish 24/7 hours", () => {
+  assert.equal(HOURS_STATUS.is24h, true);
   assert.equal(HOURS_STATUS.weekly.length, 7);
-  assert.equal(HOURS_STATUS.weekly.find((r) => r.dayOfWeek === "Thursday").closes, "04:00");
-  assert.equal(HOURS_STATUS.weekly.find((r) => r.dayOfWeek === "Sunday").closes, "02:00");
-  assert.equal(HOURS_STATUS.weekly.find((r) => r.dayOfWeek === "Wednesday").closes, "01:00");
-  assert.match(HOURS_COPY.intro, /12 PM|noon/i);
+  for (const row of HOURS_STATUS.weekly) assert.deepEqual([row.opens, row.closes], ["00:00", "23:59"], row.dayOfWeek);
+  assert.match(HOURS_COPY.intro, /24 hours a day, 7 days a week/);
+  assert.doesNotMatch(JSON.stringify({ HOURS_STATUS, HOURS_COPY }), /12 PM|\bnoon\b|4 AM|2 AM|1 AM|late-night/i);
   const hrefs = HOME_HUB_CARDS.map((c) => c.href);
   for (const required of ["/visit", "/native-cigarettes", "/nicotine-vape", "/weed-dispensary-near-me"]) {
     assert.ok(hrefs.includes(required), required);
   }
   assert.ok(!hrefs.includes("/delivery"));
   assert.ok(!hrefs.some((h) => /24|hour/.test(h)));
-  assert.doesNotMatch(read("app/page.tsx"), /\bOpen 24\b|open 24 hours|24-hour dispensary/i);
-  assert.doesNotMatch(HOURS_COPY.intro + HOURS_COPY.sections.map((s) => s.body).join(" "), /we are open 24/i);
+  assert.match(read("app/page.tsx"), /Open 24 hours, 7 days a week\./);
 });
 
 test("G1/G5 brand-once corridor titles for pillars and home", () => {
