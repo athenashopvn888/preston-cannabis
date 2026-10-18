@@ -5,9 +5,10 @@ const read = (file) => fs.readFileSync(new URL(`../${file}`, import.meta.url), "
 test("site-wide NEW ! NOW OPEN 24HRS banner sits above the header and links to /hours", () => {
   const banner = read("components/Open24Banner.tsx");
   assert.match(banner, /"NEW ! NOW OPEN 24HRS"/);
-  assert.match(read("app/globals.css"), /prefers-reduced-motion:reduce\)\{\.open24-banner::after,\.open24-new,\.open24-banner\{animation:none/);
+  assert.match(read("app/globals.css"), /prefers-reduced-motion:reduce\)\{\.open24-banner::after,\.open24-badge,\.open24-banner\{animation:none/);
   assert.match(banner, /href="\/hours"/);
-  assert.doesNotMatch(banner, /onClick|dismiss|useState/);
+  assert.doesNotMatch(banner, /onClick|dismiss|useState|open24-new/);
+  assert.match(banner, /<span className="open24-badge">\{OPEN_24_BANNER_TEXT\}<\/span>/);
   const frame = read("components/SiteFrame.tsx");
   assert.ok(frame.indexOf("<Open24Banner />") > -1 && frame.indexOf("<Open24Banner />") < frame.indexOf("<Header />"));
   assert.match(read("app/globals.css"), /\.open24-banner\{[^}]*white-space:nowrap/);
