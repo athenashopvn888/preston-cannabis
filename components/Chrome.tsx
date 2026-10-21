@@ -1,6 +1,7 @@
 ﻿import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { HOURS_STATUS } from "@/lib/content-hub.mjs";
+import { showCigarettes } from "@/lib/show-cigarettes.mjs";
 import Leaf from "./Leaf";
 
 export function Header() {
@@ -11,7 +12,7 @@ export function Header() {
       <nav aria-label="Main navigation">
         <Link href="/menu">Explore menu</Link>
         <Link href="/visit">Visit</Link>
-        <Link href="/native-cigarettes">Native cigarettes</Link>
+        {showCigarettes() ? <Link href="/native-cigarettes">Native cigarettes</Link> : null}
         <Link href="/faq">FAQs</Link>
         <Link href="/resources">Resources</Link>
         <Link href="/guides">Guides</Link>
@@ -35,7 +36,7 @@ export function Footer() {
         <Link href="/menu">Menu</Link>
         <Link href="/visit">Visit & directions</Link>
         <Link href="/hours">Store hours</Link>
-        <Link href="/native-cigarettes">Native cigarettes</Link>
+        {showCigarettes() ? <Link href="/native-cigarettes">Native cigarettes</Link> : null}
         <Link href="/nicotine-vape">Nicotine vapes</Link>
         <Link href="/contact">Contact</Link>
         <Link href="/faq">Questions & answers</Link>

@@ -1,5 +1,6 @@
 import guideCopy from "./guideCopy.json";
 import type { Product } from "./menu";
+import { isHiddenCigaretteGuide } from "./show-cigarettes.mjs";
 
 export type GuideLane = "strain" | "native_cig" | "nic_vape" | "thc_vape";
 export type GuideFaq = { question: string; answer: string };
@@ -80,14 +81,16 @@ const GUIDE_LANES: { lane: GuideLane; label: string }[] = [
   { lane: "thc_vape", label: "THC Vape" },
 ];
 
+const listedGuide = (guide: GuideEntry) => !isHiddenCigaretteGuide(guide.slug);
+
 export function getGuidesByLane(lane: GuideLane): GuideEntry[];
 export function getGuidesByLane(): { lane: GuideLane; label: string; guides: GuideEntry[] }[];
 export function getGuidesByLane(lane?: GuideLane) {
-  if (lane) return GUIDE_REGISTRY.filter((guide) => guide.lane === lane);
+  if (lane) return GUIDE_REGISTRY.filter((guide) => guide.lane === lane && listedGuide(guide));
   return GUIDE_LANES.map(({ lane, label }) => ({
     lane,
     label,
-    guides: GUIDE_REGISTRY.filter((guide) => guide.lane === lane),
+    guides: GUIDE_REGISTRY.filter((guide) => guide.lane === lane && listedGuide(guide)),
   })).filter((group) => group.guides.length > 0);
 }
 
@@ -103,5 +106,5 @@ export const getTierGuideLinks = (categoryPath: string, limit = 6) => GUIDE_REGI
 
 export const getCategoryGuideGroups = (categoryPath: string) => GUIDE_LANES.map(({ lane, label }) => ({
   label: `${label} guides`,
-  guides: GUIDE_REGISTRY.filter((guide) => guide.lane === lane && guide.preferredCategoryPath === categoryPath).slice(0, 11),
+  guides: GUIDE_REGISTRY.filter((guide) => guide.lane === lane && guide.preferredCategoryPath === categoryPath && listedGuide(guide)).slice(0, 11),
 })).filter((group) => group.guides.length > 0);

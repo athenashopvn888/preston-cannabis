@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { itemsCatchallRedirect } from "./lib/show-cigarettes.mjs";
 const config: NextConfig = {
   poweredByHeader: false,
   async headers() { return [{ source: "/:path*", headers: [
@@ -14,7 +15,7 @@ const config: NextConfig = {
     { source: "/items", destination: "/menu", permanent: true },
     { source: "/items/vapes", destination: "/menu/nicotine-vapes", permanent: true },
     { source: "/menu/vapes", destination: "/menu/nicotine-vapes", permanent: true },
-    { source: "/items/:category", destination: "/menu/:category", permanent: true }
+    itemsCatchallRedirect()
   ]; }
 };
 export default config;
