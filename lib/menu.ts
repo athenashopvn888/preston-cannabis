@@ -1,6 +1,7 @@
 import { cache } from "react";
 import { getTvData } from "@/app/lib/tvStock";
 import { normalizeMenu } from "./menu-core.mjs";
+import { isCigaretteOrTobaccoItem, showCigarettes } from "./show-cigarettes.mjs";
 export type Product = { id: string; sku: string; name: string; slug: string; category: string; tier: string; type: string; thc: string; mg: string; image: string; prices: { label: string; amount: number; regular: number; sale: number | null }[] };
 export type Menu = { products: Product[]; state: "connected" | "unconfigured" | "unavailable"; fetchedAt: string; stockDate: string; sourceIdentity: string; source: "TPC01" };
 export const getMenu = cache(async (): Promise<Menu> => {
@@ -14,6 +15,7 @@ export const getMenu = cache(async (): Promise<Menu> => {
       flowers: flowerResult.body,
       items: itemResult.body,
     });
-    return { ...empty, ...normalized, state: "connected", fetchedAt: new Date().toISOString() };
+    const products = showCigarettes() ? normalized.products : normalized.products.filter((product) => !isCigaretteOrTobaccoItem(product));
+    return { ...empty, ...normalized, products, state: "connected", fetchedAt: new Date().toISOString() };
   } catch { return { ...empty, state: "unavailable" }; }
 });

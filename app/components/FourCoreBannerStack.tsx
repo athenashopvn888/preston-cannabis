@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import CigaretteSeasonalNotice from "./CigaretteSeasonalNotice";
+import { showCigarettes } from "@/lib/show-cigarettes.mjs";
 
 type FourCoreBannerStackProps = {
   title: string;
@@ -35,11 +36,14 @@ export default function FourCoreBannerStack({
 }: FourCoreBannerStackProps) {
   const announcementRef = useRef<HTMLElement>(null);
   const [navClearance, setNavClearance] = useState<number | null>(null);
+  const cigarettesOn = showCigarettes();
   const imageObjects = [
     { name: `${storeName} top weed tiers`, description: `Exotic, Premium and AAA+ weed tiers at ${storeName} in ${storeArea}.`, contentUrl: `${storeOrigin}${TOP_WEED_IMAGE}` },
     { name: `${storeName} nicotine and THC vapes`, description: `Nicotine vapes and THC vapes at ${storeName} in ${storeArea}.`, contentUrl: `${storeOrigin}${VAPE_IMAGE}` },
-    { name: `${storeName} cigarette mix and match`, description: `Two packs for $5 mix and match and $25 carton cigarette offer at ${storeName} in ${storeArea}.`, contentUrl: `${storeOrigin}${CIGARETTE_IMAGE}` },
-    { name: `${storeName} premium cigarette offer`, description: `BB Full Flavor and Lights plus Marlboro and Belmont cigarette offer at ${storeName} in ${storeArea}.`, contentUrl: `${storeOrigin}${PREMIUM_CIGARETTE_IMAGE}` },
+    ...(cigarettesOn ? [
+      { name: `${storeName} cigarette mix and match`, description: `Two packs for $5 mix and match and $25 carton cigarette offer at ${storeName} in ${storeArea}.`, contentUrl: `${storeOrigin}${CIGARETTE_IMAGE}` },
+      { name: `${storeName} premium cigarette offer`, description: `BB Full Flavor and Lights plus Marlboro and Belmont cigarette offer at ${storeName} in ${storeArea}.`, contentUrl: `${storeOrigin}${PREMIUM_CIGARETTE_IMAGE}` },
+    ] : []),
   ].map((image) => ({ "@type": "ImageObject", ...image, caption: image.description }));
 
   useEffect(() => {
@@ -83,9 +87,11 @@ export default function FourCoreBannerStack({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": imageObjects }).replace(/</g, "\\u003c") }} />
       <figure data-core-banner="weed" style={figureStyle}><Link href={weedHref} aria-label={`Shop Exotic, Premium and AAA+ weed tiers at ${storeName}`} style={linkStyle}>{/* eslint-disable-next-line @next/next/no-img-element */}<img src={TOP_WEED_IMAGE} alt={`${storeName} in ${storeArea} — Exotic, Premium and AAA+ top weed tiers`} title={`${storeName} top weed tiers — Exotic, Premium and AAA+`} style={imageStyle} /></Link><figcaption style={captionStyle}>Top 3 tiers only (Exotic, Premium, AAA+): Buy 2g Get 1g FREE · Buy 3g Get 3g FREE (6g)</figcaption></figure>
       <figure data-core-banner="vapes" style={figureStyle}><Link href={vapeHref} aria-label={`Shop nicotine and THC vapes at ${storeName}`} style={linkStyle}>{/* eslint-disable-next-line @next/next/no-img-element */}<img src={VAPE_IMAGE} alt={`${storeName} in ${storeArea} — nicotine and THC vapes`} title={`${storeName} nicotine and THC vapes`} style={imageStyle} loading="lazy" /></Link><figcaption style={captionStyle}>Nicotine + THC vapes</figcaption></figure>
-      <CigaretteSeasonalNotice />
-      <figure data-core-banner="cigarettes" style={figureStyle}><Link href={cigaretteHref} aria-label={`Shop cigarette mix and match offers at ${storeName}`} style={linkStyle}>{/* eslint-disable-next-line @next/next/no-img-element */}<img src={CIGARETTE_IMAGE} alt={`${storeName} in ${storeArea} — 2 packs for $5 mix and match and $25 carton cigarette offer`} title={`${storeName} cigarette offer — 2 packs $5 mix and match, $25 carton`} style={imageStyle} loading="lazy" /></Link><figcaption style={captionStyle}>2 PACKS $5 / $25 CARTON</figcaption></figure>
-      <figure data-core-banner="premium-cigarettes" style={figureStyle}><Link href={cigaretteHref} aria-label={`Shop BB, Marlboro and Belmont cigarette offers at ${storeName}`} style={linkStyle}>{/* eslint-disable-next-line @next/next/no-img-element */}<img src={PREMIUM_CIGARETTE_IMAGE} alt={`${storeName} in ${storeArea} — BB Full Flavor and Lights, Marlboro and Belmont premium cigarettes`} title={`${storeName} premium cigarettes — BB, Marlboro and Belmont`} style={imageStyle} loading="lazy" /></Link><figcaption style={captionStyle}>BB Full Flavor + Lights 2 packs $5 · Marlboro &amp; Belmont $10/pack</figcaption></figure>
+      {cigarettesOn ? <CigaretteSeasonalNotice /> : null}
+      {/* eslint-disable @next/next/no-img-element */}
+      {cigarettesOn ? <figure data-core-banner="cigarettes" style={figureStyle}><Link href={cigaretteHref} aria-label={`Shop cigarette mix and match offers at ${storeName}`} style={linkStyle}><img src={CIGARETTE_IMAGE} alt={`${storeName} in ${storeArea} — 2 packs for $5 mix and match and $25 carton cigarette offer`} title={`${storeName} cigarette offer — 2 packs $5 mix and match, $25 carton`} style={imageStyle} loading="lazy" /></Link><figcaption style={captionStyle}>2 PACKS $5 / $25 CARTON</figcaption></figure> : null}
+      {cigarettesOn ? <figure data-core-banner="premium-cigarettes" style={figureStyle}><Link href={cigaretteHref} aria-label={`Shop BB, Marlboro and Belmont cigarette offers at ${storeName}`} style={linkStyle}><img src={PREMIUM_CIGARETTE_IMAGE} alt={`${storeName} in ${storeArea} — BB Full Flavor and Lights, Marlboro and Belmont premium cigarettes`} title={`${storeName} premium cigarettes — BB, Marlboro and Belmont`} style={imageStyle} loading="lazy" /></Link><figcaption style={captionStyle}>BB Full Flavor + Lights 2 packs $5 · Marlboro &amp; Belmont $10/pack</figcaption></figure> : null}
+      {/* eslint-enable @next/next/no-img-element */}
     </aside>
   );
 }

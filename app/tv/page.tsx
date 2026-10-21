@@ -10,6 +10,7 @@ import TvReviewQr from "../TvReviewQr";
 import { tierPerGramLabel } from "../lib/tierBadgePrice";
 import { tvHiring } from "../lib/tvHiring";
 import { formatBoardTime, readStockUpdatedAt } from "../lib/tvStockTime";
+import { isCigaretteOrTobaccoItem, showCigarettes } from "@/lib/show-cigarettes.mjs";
 
 /* -- Types -- */
 interface PricePoint { regular: number; sale: number | null; }
@@ -746,7 +747,7 @@ export default function TVMenuPage() {
       }
       setFlowers(grouped);
 
-      setAddOns(iData.filter(it => it.category === "ADD ONS" || it.category === "PREROLLS").slice(0, 14));
+      setAddOns(iData.filter(it => (it.category === "ADD ONS" || it.category === "PREROLLS") && (showCigarettes() || !isCigaretteOrTobaccoItem(it))).slice(0, 14));
 
       const hi: Record<string,number> = {};
       for (const t of TIERS) hi[t] = 0;

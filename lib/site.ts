@@ -7,6 +7,7 @@ export const SITE = {
 } as const;
 // TPC01-INDEX-GOLIVE: indexability enabled for canonical public routes after NAP/robots release.
 export const INDEXABLE = true;
+export { SHOW_CIGARETTES, showCigarettes } from "./show-cigarettes.mjs";
 export const canonical = (path = "/") => `${SITE.domain}${path === "/" ? "" : path.replace(/\/$/, "")}`;
 export function meta(title: string, description: string, path = "/"): Metadata {
   return { title, description, alternates: { canonical: canonical(path) }, robots: { index: INDEXABLE, follow: INDEXABLE },

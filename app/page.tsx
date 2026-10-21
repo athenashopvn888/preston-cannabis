@@ -8,6 +8,7 @@ import { ARTWORK } from "@/lib/artwork";
 import { meta, SITE } from "@/lib/site";
 import { HOME_COPY } from "@/lib/editorial";
 import { CORRIDOR_NEIGHBOURHOODS, CORRIDOR_NOTES, HOME_FAQS, HOME_HUB_CARDS, HOURS_STATUS } from "@/lib/content-hub.mjs";
+import { gateFaqEntries, showCigarettes } from "@/lib/show-cigarettes.mjs";
 import FourCoreBannerStack from "./components/FourCoreBannerStack";
 
 const homeMetadata = meta(HOME_COPY.title, HOME_COPY.description);
@@ -16,7 +17,7 @@ export const dynamic = "force-dynamic";
 
 export default function Home() {
   return <main id="main">
-    <FourCoreBannerStack title="Preston Cannabis Dispensary on Preston Street, Little Italy" storeName="Preston Cannabis" storeArea="Little Italy, Ottawa" storeOrigin="https://prestoncannabis.com" weedHref="/exotic" vapeHref="/menu/nicotine-vapes" cigaretteHref="/menu/cigarettes" />
+    <FourCoreBannerStack title="Preston Cannabis Dispensary on Preston Street, Little Italy" storeName="Preston Cannabis" storeArea="Little Italy, Ottawa" storeOrigin="https://prestoncannabis.com" weedHref="/exotic" vapeHref="/menu/nicotine-vapes" cigaretteHref={showCigarettes() ? "/menu/cigarettes" : "/nicotine-vape"} />
 <section className={`hero ${ARTWORK.hero ? "hero-photographic" : ""}`}>
       {ARTWORK.hero && <EditorialArtwork asset={ARTWORK.hero} className="hero-background" priority/>}
       <div className="hero-lines" aria-hidden="true"/>
@@ -67,7 +68,7 @@ export default function Home() {
         <p className="quiet-note" style={{margin:0}}>Open 24 hours, 7 days a week.</p>
       </div>
       <div className="tier-card-grid">
-        {HOME_HUB_CARDS.map((card, i) => (
+        {HOME_HUB_CARDS.filter((card) => showCigarettes() || card.href !== "/native-cigarettes").map((card, i) => (
           <Link className={`tier-card tier-card-${i}`} href={card.href} key={card.href}>
             <div className="tier-card-copy">
               <span className="eyebrow">{card.eyebrow}</span>
@@ -104,7 +105,7 @@ export default function Home() {
         <Link className="text-link" href="/faq">All questions →</Link>
       </div>
       <div className="faq-list">
-        {HOME_FAQS.map(({ question, answer }) => (
+        {gateFaqEntries(HOME_FAQS).map(({ question, answer }: { question: string; answer: string }) => (
           <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>
         ))}
       </div>

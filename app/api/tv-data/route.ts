@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getTvData } from "../../lib/tvStock";
+import { isCigaretteOrTobaccoItem, showCigarettes } from "@/lib/show-cigarettes.mjs";
 
 export const runtime = "nodejs";
 
@@ -10,14 +11,20 @@ export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
   const type = new URL(request.url).searchParams.get("type") || "flowers";
-  const { body, headers, status = 200 } = await getTvData({
+  const result = await getTvData({
     type,
     staticFlowers: [],
     staticItems: [],
   });
+  let body = result.body;
+  const headers = { ...result.headers, "X-Robots-Tag": "noindex" };
+  if (!showCigarettes() && type === "items" && Array.isArray(body)) {
+    body = body.filter((item) => !isCigaretteOrTobaccoItem(item));
+    headers["x-tv-data-item-count"] = String(body.length);
+  }
 
   return NextResponse.json(body, {
-    status,
-    headers: { ...headers, "X-Robots-Tag": "noindex" },
+    status: result.status ?? 200,
+    headers,
   });
 }

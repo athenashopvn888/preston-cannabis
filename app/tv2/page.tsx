@@ -12,6 +12,7 @@ import {
   type Tv2DaytimePromo,
 } from "./tv2Promos";
 import { isNicotineItem } from "../tv/flashMessages";
+import { isCigaretteOrTobaccoItem, showCigarettes } from "@/lib/show-cigarettes.mjs";
 
 /* -- TYPES -- */
 interface Item {
@@ -35,6 +36,7 @@ const fmtTHC = (v?:string) => { const s=String(v||"").trim(); if(!s)return""; if
 const fmtMG = (v?:string) => { const s=String(v||"").trim(); if(!s)return""; if(/^\d+(\.\d+)?$/.test(s))return s+"mg"; return s; };
 
 const hasCartonFlash = (item?: Item) =>
+  showCigarettes() &&
   item?.category === "CIGARETTES" &&
   item.promoImage === "CIG_2_FOR_5" &&
   Number(String(item.price || "").replace(/[^0-9.]/g, "")) === 25;
@@ -268,8 +270,10 @@ export default function TV2Page() {
           <HiringRibbon hiring={tvHiring} />
           <div className={styles.grid}>
             {CARD_CONFIG.map(card => {
-              const filtered = items.filter(card.filter).filter(it => !(daytime && isNicotineItem(it)));
-              const promo = getTv2DaytimePromo(card.id, daytime, promoElapsedMs);
+              const cigarettesOn = showCigarettes();
+              const filtered = items.filter(card.filter).filter(it => !(daytime && isNicotineItem(it))).filter(it => cigarettesOn || card.id !== "CIGARETTES" || !isCigaretteOrTobaccoItem(it));
+              const promo = card.id === "CIGARETTES" && !cigarettesOn ? undefined : getTv2DaytimePromo(card.id, daytime, promoElapsedMs);
+              if (card.id === "CIGARETTES" && !cigarettesOn && !promo && filtered.length === 0) return null;
 
               if (promo) {
                 return (
@@ -307,7 +311,7 @@ export default function TV2Page() {
               return (
                 <ItemCard key={card.id} title={card.title} accent={card.accent}
                   items={filtered} hiIdx={highlights[card.id]||0} preset={card.preset}
-                  offerPromo={card.id === "CIGARETTES" ? getCigaretteOfferPromo(daytime, promoElapsedMs) : undefined} />
+                  offerPromo={cigarettesOn && card.id === "CIGARETTES" ? getCigaretteOfferPromo(daytime, promoElapsedMs) : undefined} />
               );
             })}
           </div>

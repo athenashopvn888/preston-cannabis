@@ -3,6 +3,7 @@ import { Breadcrumbs } from "@/components/Chrome";
 import { meta, SITE } from "@/lib/site";
 import { jsonLd, simplePageGraph } from "@/lib/landing-schema.mjs";
 import { VISIT_COPY, HOURS_STATUS } from "@/lib/content-hub.mjs";
+import { showCigarettes } from "@/lib/show-cigarettes.mjs";
 
 const pageMeta = meta(VISIT_COPY.title, VISIT_COPY.description, "/visit");
 export const metadata = { ...pageMeta, title: { absolute: VISIT_COPY.title }, openGraph: { ...pageMeta.openGraph, title: VISIT_COPY.title } };
@@ -53,7 +54,7 @@ export default function VisitPage() {
     <aside className="related-links">
       <h2>Continue</h2>
       <nav>
-        <Link href="/native-cigarettes">Native cigarettes →</Link>
+        {showCigarettes() ? <Link href="/native-cigarettes">Native cigarettes →</Link> : null}
         <Link href="/nicotine-vape">Nicotine vapes →</Link>
         <Link href="/exotic">Exotic Weed →</Link>
         <Link href="/menu">Menu →</Link>
