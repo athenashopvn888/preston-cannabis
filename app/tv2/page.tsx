@@ -271,7 +271,7 @@ export default function TV2Page() {
           <div className={styles.grid}>
             {CARD_CONFIG.map(card => {
               const cigarettesOn = showCigarettes();
-              const filtered = items.filter(card.filter).filter(it => !(daytime && isNicotineItem(it))).filter(it => cigarettesOn || card.id !== "CIGARETTES" || !isCigaretteOrTobaccoItem(it));
+              const filtered = items.filter(card.filter).filter(it => card.id === "CIGARETTES" || !(daytime && isNicotineItem(it))).filter(it => cigarettesOn || card.id !== "CIGARETTES" || !isCigaretteOrTobaccoItem(it));
               const promo = card.id === "CIGARETTES" && !cigarettesOn ? undefined : getTv2DaytimePromo(card.id, daytime, promoElapsedMs);
               if (card.id === "CIGARETTES" && !cigarettesOn && !promo && filtered.length === 0) return null;
 

@@ -17,11 +17,14 @@ export async function GET(request: Request) {
     staticItems: [],
   });
   let body = result.body;
-  const headers = { ...result.headers, "X-Robots-Tag": "noindex" };
+  const headers: Record<string, string> = { ...result.headers, "X-Robots-Tag": "noindex" };
   if (!showCigarettes() && type === "items" && Array.isArray(body)) {
     body = body.filter((item) => !isCigaretteOrTobaccoItem(item));
     headers["x-tv-data-item-count"] = String(body.length);
   }
+  const cigaretteOn = showCigarettes();
+  headers["x-tv-data-cig-tv"] = cigaretteOn ? "1" : "0";
+  headers["x-tv-data-cig-web"] = cigaretteOn ? "1" : "0";
 
   return NextResponse.json(body, {
     status: result.status ?? 200,

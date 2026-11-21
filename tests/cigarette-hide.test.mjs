@@ -8,6 +8,7 @@ import {
   isCigaretteOrTobaccoItem,
   isHiddenCigaretteGuide,
   itemsCatchallRedirect,
+  isCigaretteScheduleActive,
   showCigarettes,
 } from "../lib/show-cigarettes.mjs";
 
@@ -84,5 +85,26 @@ test("recallable cigarette switch, redirects, and kept accessories", () => {
   });
   withCigaretteEnv("false", () => {
     assert.equal(showCigarettes(), false);
+  });
+});
+
+test("owner-approved cigarette schedule boundaries", () => {
+  const on = [
+    "2026-11-23T07:59:00-05:00",
+    "2026-11-23T20:00:00-05:00",
+    "2026-11-27T17:00:00-05:00",
+    "2026-11-28T12:00:00-05:00",
+  ];
+  const off = [
+    "2026-11-23T08:00:00-05:00",
+    "2026-11-23T19:59:00-05:00",
+    "2026-11-27T08:00:00-05:00",
+    "2026-11-27T16:59:00-05:00",
+  ];
+  on.forEach((value) => assert.equal(isCigaretteScheduleActive(new Date(value)), true, value));
+  off.forEach((value) => assert.equal(isCigaretteScheduleActive(new Date(value)), false, value));
+  withCigaretteEnv("true", () => {
+    assert.equal(showCigarettes(new Date("2026-11-28T12:00:00-05:00")), true);
+    assert.equal(showCigarettes(new Date("2026-11-27T12:00:00-05:00")), false);
   });
 });
